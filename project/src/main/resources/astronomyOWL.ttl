@@ -1,0 +1,2703 @@
+@prefix astronomy: <http://example.org/astronomy#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+_:node1ih8ps2max1 a owl:Restriction;
+  owl:onProperty astronomy:influences;
+  owl:someValuesFrom astronomy:Planet .
+
+_:node1ih8ps2max2 a owl:Restriction;
+  owl:onProperty astronomy:surroundedBy;
+  owl:someValuesFrom astronomy:Moon .
+
+_:node1ih8ps2max3 a owl:Restriction;
+  owl:allValuesFrom astronomy:MainSequenceStar;
+  owl:onProperty astronomy:orbitsAroundStar .
+
+_:node1ih8ps2max4 a owl:Restriction;
+  owl:allValuesFrom astronomy:Comet;
+  owl:onProperty astronomy:collidedWith .
+
+_:node1ih8ps2max5 a owl:Restriction;
+  owl:hasValue astronomy:Sun;
+  owl:onProperty astronomy:orbitsAroundStar .
+
+_:node1ih8ps2max6 a owl:Restriction;
+  owl:hasValue astronomy:MilkyWay;
+  owl:onProperty astronomy:partOfGalaxy .
+
+<http://example.org/astronomy> a rdfs:Resource, owl:Ontology, owl:Thing;
+  <http://spinrdf.org/spin#imports> <http://topbraid.org/spin/rdfsplus>;
+  owl:sameAs <http://example.org/astronomy>;
+  owl:versionInfo "Created with TopBraid Composer" .
+
+astronomy:Achernar a astronomy:BlueGiantStar;
+  astronomy:discoveredBy "Al-Sufi";
+  astronomy:hasDiameter "9300000";
+  astronomy:hasGravity "8000";
+  astronomy:hasMass "18 quintillion metric tons";
+  astronomy:hasTemperature "20000";
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:spectralType "B6_Vep";
+  rdfs:label "ZetaOrionis" .
+
+astronomy:Akatsuki a astronomy:ArtificialSatellite, astronomy:SpaceArtifact, astronomy:SpaceObject,
+    rdfs:Resource, owl:Thing;
+  astronomy:hasActiveStatus true;
+  astronomy:hasOperator "Japan Aerospace Exploration Agency";
+  astronomy:hasOrbitType "Elliptical";
+  astronomy:launchDate "2010-05-20"^^xsd:date;
+  astronomy:launchedBy astronomy:H_IIA202;
+  rdfs:label "Akatsuki";
+  owl:sameAs astronomy:Akatsuki .
+
+astronomy:AlphaCygni a astronomy:BlueGiantStar;
+  astronomy:discoveredBy "Ancient Astronomers";
+  astronomy:hasDiameter "200000000";
+  astronomy:hasGravity "800";
+  astronomy:hasMass "19 quintillion metric tons";
+  astronomy:hasTemperature "8500";
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:spectralType "A2_Ia";
+  astronomy:surroundedBy astronomy:Betelgeuse;
+  rdfs:label "AlphaCygni" .
+
+astronomy:AlphaTauri a astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:GiantStar,
+    astronomy:RedGiantStar, astronomy:SpaceObject, astronomy:Star, astronomy:StellarObject,
+    rdfs:Resource, owl:Thing;
+  astronomy:discoveredBy "Hipparchus";
+  astronomy:discoveredDate "0134-01-01"^^xsd:date;
+  astronomy:hasDiameter "61000000";
+  astronomy:hasGravity "0.5";
+  astronomy:hasMass "680 sextillion metric tons";
+  astronomy:hasPhysicalProperty "0.5", "3900", "61000000", "680 sextillion metric tons";
+  astronomy:hasTemperature "3900";
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:relatedTo astronomy:HubbleSpaceTelescope, astronomy:MilkyWay;
+  astronomy:spectralType "K5_III";
+  rdfs:label "AlphaTauri";
+  owl:sameAs astronomy:AlphaTauri .
+
+astronomy:AlphaVirginis a astronomy:BlueGiantStar;
+  astronomy:discoveredBy "Unknown";
+  astronomy:hasDiameter "15.4000000";
+  astronomy:hasGravity "310";
+  astronomy:hasMass "11 million trillion metric tons";
+  astronomy:hasTemperature "22400";
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:spectralType "B1_III_IV";
+  astronomy:surroundedBy astronomy:SpicaA;
+  rdfs:label "AlphaVirginis" .
+
+astronomy:Andromeda a astronomy:AstronomicalObject, astronomy:Galaxy, astronomy:SpaceObject,
+    astronomy:Spiral, rdfs:Resource, owl:Thing;
+  astronomy:discoveredBy "Abd al-Rahman al-Sufi";
+  astronomy:discoveredDate "0964-01-01"^^xsd:date;
+  astronomy:hasGalacticCenter astronomy:M31;
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:relatedTo astronomy:HubbleSpaceTelescope;
+  rdfs:label "Andromeda";
+  owl:sameAs astronomy:Andromeda .
+
+astronomy:AndromedaSN a astronomy:Supernova;
+  astronomy:hasBrightness -2.0;
+  astronomy:hasDuration "172800"^^xsd:int;
+  astronomy:observedFrom astronomy:Earth;
+  astronomy:visibleToNakedEye true;
+  astronomy:wasObservedOn "1885-08-20"^^xsd:date;
+  rdfs:label "AndromedaSN" .
+
+astronomy:Apollo a astronomy:MannedSpacecraft, astronomy:SpaceArtifact, astronomy:SpaceObject,
+    astronomy:Spacecraft, rdfs:Resource, owl:Thing;
+  astronomy:dockedAt astronomy:Skylab;
+  astronomy:hasActiveStatus false;
+  astronomy:hasCrewCapacity 3;
+  astronomy:hasOperator "NASA";
+  astronomy:launchDate "1969-07-16"^^xsd:date;
+  rdfs:label "Apollo";
+  owl:sameAs astronomy:Apollo .
+
+astronomy:ArtificialSatellite a owl:Class, owl:Thing;
+  rdfs:label "ArtificialSatellite";
+  rdfs:subClassOf astronomy:SpaceArtifact, astronomy:SpaceObject, rdfs:Resource;
+  owl:sameAs astronomy:ArtificialSatellite .
+
+astronomy:AstronomicalObject a owl:Class, owl:Thing;
+  rdfs:label "AstronomicalObject";
+  rdfs:subClassOf astronomy:SpaceObject, rdfs:Resource;
+  owl:sameAs astronomy:AstronomicalObject .
+
+astronomy:AstronomicalPhenomenon a owl:Class, owl:Thing;
+  rdfs:label "AstronomicalPhenomenon";
+  rdfs:subClassOf rdfs:Resource;
+  owl:sameAs astronomy:AstronomicalPhenomenon .
+
+astronomy:AtlasV401 a astronomy:SpaceArtifact, astronomy:SpaceObject, astronomy:Spacecraft,
+    astronomy:UnmannedSpacecraft, rdfs:Resource, owl:Thing;
+  astronomy:hasActiveStatus true;
+  astronomy:hasOperator "United Launch Alliance ";
+  astronomy:launchDate "2002-08-21"^^xsd:date;
+  rdfs:label "AtlasV401";
+  owl:sameAs astronomy:AtlasV401 .
+
+astronomy:BetaOrionis a astronomy:BlueGiantStar;
+  astronomy:discoveredBy "Unknown";
+  astronomy:hasDiameter "78000000";
+  astronomy:hasGravity "110";
+  astronomy:hasMass "21.6 million trillion metric tons";
+  astronomy:hasTemperature "11000";
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:spectralType "B8_Ia";
+  astronomy:surroundedBy astronomy:Betelgeuse;
+  rdfs:label "BetaOrionis" .
+
+astronomy:Betelgeuse a astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:RedSuperGiantStar,
+    astronomy:SpaceObject, astronomy:Star, astronomy:StellarObject, astronomy:SuperGiantStar,
+    rdfs:Resource, owl:Thing;
+  astronomy:discoveredBy "Johann Bayer";
+  astronomy:discoveredDate "1603-01-01"^^xsd:date;
+  astronomy:hasDiameter "1400000000";
+  astronomy:hasGravity "0.00085";
+  astronomy:hasMass "6.6 sextillion metric tons";
+  astronomy:hasPhysicalProperty "0.00085", "1400000000", "3500", "6.6 sextillion metric tons";
+  astronomy:hasTemperature "3500";
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:relatedTo astronomy:HubbleSpaceTelescope, astronomy:MilkyWay;
+  astronomy:spectralType "M1_M2_Ia";
+  rdfs:label "Betelgeuse";
+  owl:sameAs astronomy:Betelgeuse .
+
+astronomy:BlackHole a owl:Class, owl:Thing;
+  rdfs:label "BlackHole";
+  rdfs:subClassOf astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    astronomy:StellarObject, rdfs:Resource;
+  owl:sameAs astronomy:BlackHole .
+
+astronomy:BlueGiantStar a owl:Class, owl:Thing;
+  rdfs:label "BlueGiantStar";
+  rdfs:subClassOf astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:GiantStar,
+    astronomy:SpaceObject, astronomy:Star, astronomy:StellarObject, rdfs:Resource;
+  owl:sameAs astronomy:BlueGiantStar .
+
+astronomy:BlueSuperGiantStar a owl:Class, owl:Thing;
+  rdfs:label "BlueSuperGiantStar";
+  rdfs:subClassOf astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    astronomy:Star, astronomy:StellarObject, astronomy:SuperGiantStar, rdfs:Resource;
+  owl:sameAs astronomy:BlueSuperGiantStar .
+
+astronomy:Callisto a astronomy:Moon;
+  astronomy:discoveredBy "Galileo Galilei";
+  astronomy:discoveredDate "1610-01-07"^^xsd:date;
+  astronomy:hasDiameter "4.821";
+  astronomy:hasGravity "1.235";
+  astronomy:hasLife false;
+  astronomy:hasMass "107.6 quintillion metric tons";
+  astronomy:hasOrbitalPeriod "16.69";
+  astronomy:hasTemperature "-139.0";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:influences astronomy:Jupiter;
+  astronomy:observedBySpacecraft astronomy:HubbleSpaceTelescope;
+  astronomy:orbitsAroundPlanet astronomy:Jupiter;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:visibleFrom astronomy:Earth;
+  astronomy:visitedBy astronomy:GalileoSpacecraft;
+  rdfs:label "Callisto" .
+
+astronomy:CasA a astronomy:Supernova;
+  astronomy:hasDuration "525600"^^xsd:int;
+  astronomy:observedFrom astronomy:Earth;
+  astronomy:visibleToNakedEye true;
+  astronomy:wasObservedOn "1574-07-23"^^xsd:date;
+  rdfs:label "Cas A" .
+
+astronomy:Cassini-Huygens_Mission a astronomy:SpaceArtifact, astronomy:SpaceObject,
+    astronomy:Spacecraft, astronomy:UnmannedSpacecraft, rdfs:Resource, owl:Thing;
+  astronomy:hasActiveStatus false;
+  astronomy:hasOperator "NASA, ESA and ASI";
+  astronomy:launchDate "1997-10-15"^^xsd:date;
+  rdfs:label "Cassini-Huygens Mission";
+  owl:sameAs astronomy:Cassini-Huygens_Mission .
+
+astronomy:CelestialBody a owl:Class, owl:Thing;
+  rdfs:label "CelestialBody";
+  rdfs:subClassOf astronomy:AstronomicalObject, astronomy:SpaceObject, rdfs:Resource;
+  owl:sameAs astronomy:CelestialBody .
+
+astronomy:CentaurusA a astronomy:AstronomicalObject, astronomy:Elliptical, astronomy:Galaxy,
+    astronomy:SpaceObject, rdfs:Resource, owl:Thing;
+  astronomy:discoveredBy "James Dunlop";
+  astronomy:discoveredDate "1826-01-01"^^xsd:date;
+  astronomy:hasGalacticCenter astronomy:CentaurusABlackHole;
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:relatedTo astronomy:HubbleSpaceTelescope;
+  rdfs:label "CentaurusA";
+  owl:sameAs astronomy:CentaurusA .
+
+astronomy:CentaurusABlackHole a astronomy:SupermassiveBlackHole;
+  astronomy:discoveredBy "John Herschel";
+  astronomy:discoveredDate "1847-01-01"^^xsd:date;
+  astronomy:hasDiameter "567.6000000000000";
+  astronomy:hasMass "55,000,000,000,000 quadrillion metric tons";
+  astronomy:hasTemperature "100000000";
+  astronomy:influences astronomy:CentaurusA;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:partOfGalaxy astronomy:CentaurusA;
+  rdfs:label "CentaurusABlackHole" .
+
+astronomy:Comet a owl:Class, owl:Thing;
+  rdfs:label "Comet";
+  rdfs:subClassOf astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:PlanetaryObject,
+    astronomy:SpaceObject, rdfs:Resource;
+  owl:sameAs astronomy:Comet .
+
+astronomy:CommunicationSatellite a owl:Class, owl:Thing;
+  rdfs:label "CommunicationSatellite";
+  rdfs:subClassOf astronomy:ArtificialSatellite, astronomy:SpaceArtifact, astronomy:SpaceObject,
+    rdfs:Resource;
+  owl:sameAs astronomy:CommunicationSatellite .
+
+astronomy:CrabNebula a astronomy:Supernova;
+  astronomy:hasBrightness -6.0;
+  astronomy:hasDuration "33120"^^xsd:int;
+  astronomy:observedFrom astronomy:Earth;
+  astronomy:visibleToNakedEye true;
+  astronomy:wasObservedOn "1054-07-04"^^xsd:date;
+  rdfs:label "Crab Nebula" .
+
+astronomy:CygnusA a astronomy:SupermassiveBlackHole;
+  astronomy:discoveredBy " Grote Reber";
+  astronomy:discoveredDate "1939-07-19"^^xsd:date;
+  astronomy:hasDiameter "25000000000";
+  astronomy:hasMass "2.5 quintillion quintillion metric tons";
+  astronomy:hasSpin 0.85;
+  astronomy:hasTemperature "100000";
+  rdfs:label "CygnusA" .
+
+astronomy:CygnusX1 a astronomy:AstronomicalObject, astronomy:BlackHole, astronomy:CelestialBody,
+    astronomy:SpaceObject, astronomy:StellarBlackHole, astronomy:StellarObject, rdfs:Resource,
+    owl:Thing;
+  astronomy:discoveredBy "Tom Bolton";
+  astronomy:discoveredDate "1964-08-15"^^xsd:date;
+  astronomy:hasDiameter "44.6";
+  astronomy:hasMass "29.5 quadrillion metric tons";
+  astronomy:hasPhysicalProperty "10000000", "29.5 quadrillion metric tons", "44.6";
+  astronomy:hasSpin 0.94;
+  astronomy:hasTemperature "10000000";
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:relatedTo astronomy:HubbleSpaceTelescope, astronomy:MilkyWay;
+  astronomy:surroundedBy astronomy:HDE226868;
+  rdfs:label "CygnusX1";
+  owl:sameAs astronomy:CygnusX1 .
+
+astronomy:DeepImpact a astronomy:UnmannedSpacecraft;
+  astronomy:hasActiveStatus false;
+  astronomy:hasOperator "NASA";
+  astronomy:launchDate "2005-01-12"^^xsd:date;
+  rdfs:label "DeepImpact" .
+
+astronomy:DeltaII7925H a astronomy:SpaceArtifact, astronomy:SpaceObject, astronomy:Spacecraft,
+    astronomy:UnmannedSpacecraft, rdfs:Resource, owl:Thing;
+  astronomy:hasActiveStatus true;
+  astronomy:hasOperator "United Launch Alliance";
+  astronomy:launchDate "1998-03-13"^^xsd:date;
+  rdfs:label "DeltaII7925H";
+  owl:sameAs astronomy:DeltaII7925H .
+
+astronomy:DwarfPlanet a owl:Class, owl:Thing;
+  rdfs:label "DwarfPlanet";
+  rdfs:subClassOf astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:PlanetaryObject,
+    astronomy:SpaceObject, rdfs:Resource;
+  owl:sameAs astronomy:DwarfPlanet .
+
+astronomy:Earth a astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Planet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource, owl:Thing;
+  astronomy:discoveredBy "Unknown";
+  astronomy:hasArtificialSatellite astronomy:GPS, astronomy:Goes, astronomy:Iridium;
+  astronomy:hasColor "blue,green and white";
+  astronomy:hasDiameter "120742";
+  astronomy:hasGravity "9.81";
+  astronomy:hasLife true;
+  astronomy:hasMass "5,972,000,000,000 metric tons";
+  astronomy:hasOrbitalPeriod "365.25";
+  astronomy:hasPhysicalProperty "120742", "15", "5,972,000,000,000 metric tons", "9.81",
+    "blue,green and white";
+  astronomy:hasSatellite astronomy:EarthMoon;
+  astronomy:hasTemperature "15";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:influences astronomy:EarthMoon;
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:orbitsAround astronomy:Sun;
+  astronomy:orbitsAroundStar astronomy:Sun;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:relatedTo astronomy:HubbleSpaceTelescope, astronomy:MilkyWay, astronomy:Sun;
+  astronomy:visibleFrom astronomy:Mars, astronomy:Venus;
+  astronomy:visitedBy astronomy:Apollo, astronomy:VoyagerProbes;
+  rdfs:label "Earth";
+  owl:sameAs astronomy:Earth .
+
+astronomy:EarthMoon a astronomy:Moon;
+  astronomy:discoveredBy "Galileo Galilei";
+  astronomy:discoveredDate "1610-01-01"^^xsd:date;
+  astronomy:hasDiameter "3474.8";
+  astronomy:hasGravity "1.62";
+  astronomy:hasLife true;
+  astronomy:hasMass "10.8 trillion metric tons";
+  astronomy:hasOrbitalPeriod "0.0629";
+  astronomy:hasTemperature "127.0";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:influences astronomy:Earth;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope, astronomy:LunarReconnaissanceOrbiter;
+  astronomy:orbitsAroundPlanet astronomy:Earth;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:visibleFrom astronomy:Earth;
+  astronomy:visitedBy astronomy:Apollo;
+  rdfs:label "Moon" .
+
+astronomy:Eclipse a owl:Class, owl:Thing;
+  rdfs:label "Eclipse";
+  rdfs:subClassOf astronomy:AstronomicalPhenomenon, rdfs:Resource;
+  owl:sameAs astronomy:Eclipse .
+
+astronomy:Elliptical a owl:Class, owl:Thing;
+  rdfs:label "Elliptical";
+  rdfs:subClassOf astronomy:AstronomicalObject, astronomy:Galaxy, astronomy:SpaceObject,
+    rdfs:Resource;
+  owl:sameAs astronomy:Elliptical .
+
+astronomy:Enceladus a astronomy:Moon;
+  astronomy:discoveredBy "William Herschel";
+  astronomy:discoveredDate "1789-08-28"^^xsd:date;
+  astronomy:hasDiameter "504.2";
+  astronomy:hasGravity "0.113";
+  astronomy:hasLife true;
+  astronomy:hasMass "0.108 quintillion metric tons";
+  astronomy:hasOrbitalPeriod "1.37";
+  astronomy:hasTemperature "-201.0";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:influences astronomy:Saturn;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:orbitsAroundPlanet astronomy:Saturn;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:visibleFrom astronomy:Earth;
+  astronomy:visitedBy astronomy:Cassini-Huygens_Mission;
+  rdfs:label "Enceladus" .
+
+astronomy:Eris a astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:DwarfPlanet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource, owl:Thing;
+  astronomy:discoveredBy "Mike Brown, Chad Trujillo and David Rabinowitz";
+  astronomy:discoveredDate "2005-01-05"^^xsd:date;
+  astronomy:hasDiameter "2326";
+  astronomy:hasGravity "0.082";
+  astronomy:hasLife false;
+  astronomy:hasMass "16.6 quintillion metric tons";
+  astronomy:hasOrbitalPeriod "557";
+  astronomy:hasPhysicalProperty "-217", "0.082", "16.6 quintillion metric tons", "2326";
+  astronomy:hasTemperature "-217";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:orbitsAround astronomy:Sun;
+  astronomy:orbitsAroundStar astronomy:Sun;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:relatedTo astronomy:HubbleSpaceTelescope, astronomy:MilkyWay, astronomy:Sun;
+  astronomy:visibleFrom astronomy:Earth;
+  rdfs:label "Eris";
+  owl:sameAs astronomy:Eris .
+
+astronomy:Europa a astronomy:Moon;
+  astronomy:discoveredBy "Galileo Galilei";
+  astronomy:discoveredDate "1610-01-08"^^xsd:date;
+  astronomy:hasDiameter "3121.6";
+  astronomy:hasGravity "1.314";
+  astronomy:hasLife true;
+  astronomy:hasMass "48 quintillion metric tons";
+  astronomy:hasOrbitalPeriod "0.00957";
+  astronomy:hasTemperature "-160.0";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:influences astronomy:Jupiter;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:orbitsAroundPlanet astronomy:Jupiter;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:visibleFrom astronomy:Earth;
+  astronomy:visitedBy astronomy:GalileoSpacecraft;
+  rdfs:label "Europa" .
+
+astronomy:EventHorizonTelescope a astronomy:SpaceArtifact, astronomy:SpaceObject,
+    astronomy:Telescope, rdfs:Resource, owl:Thing;
+  astronomy:hasActiveStatus true;
+  astronomy:hasFocalLength 10.0;
+  astronomy:hasOperator "Event Horizon Telescope Collaboration";
+  astronomy:launchDate "2019-04-10"^^xsd:date;
+  rdfs:label "EventHorizonTelescope";
+  owl:sameAs astronomy:EventHorizonTelescope .
+
+astronomy:GPS a astronomy:ArtificialSatellite, astronomy:NavigationSatellite, astronomy:SpaceArtifact,
+    astronomy:SpaceObject, rdfs:Resource, owl:Thing;
+  astronomy:hasActiveStatus true;
+  astronomy:hasOperator "United States SpaceForce";
+  astronomy:hasOrbitType "Medium Earth Orbit";
+  astronomy:interactsWith astronomy:InternationalSpaceStation;
+  astronomy:launchDate "1978-02-22"^^xsd:date;
+  astronomy:launchedBy astronomy:AtlasV401, astronomy:DeltaII7925H;
+  astronomy:providesServiceTo astronomy:Earth;
+  rdfs:label "GPS";
+  owl:sameAs astronomy:GPS .
+
+astronomy:Galaxy a owl:Class, owl:Thing;
+  rdfs:label "Galaxy";
+  rdfs:subClassOf astronomy:AstronomicalObject, astronomy:SpaceObject, rdfs:Resource;
+  owl:sameAs astronomy:Galaxy .
+
+astronomy:GalileoSpacecraft a astronomy:SpaceArtifact, astronomy:SpaceObject, astronomy:Spacecraft,
+    astronomy:UnmannedSpacecraft, rdfs:Resource, owl:Thing;
+  astronomy:hasActiveStatus false;
+  astronomy:hasOperator "NASA and ESA";
+  astronomy:launchDate "1989-10-18"^^xsd:date;
+  rdfs:label "Galileo";
+  owl:sameAs astronomy:GalileoSpacecraft .
+
+astronomy:GammaOrionis a astronomy:BlueGiantStar;
+  astronomy:discoveredBy "Ancient Astronomers";
+  astronomy:hasDiameter "6400000";
+  astronomy:hasGravity "3200";
+  astronomy:hasMass "14 quintillion metric tons";
+  astronomy:hasTemperature "21500";
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:spectralType "B2_III";
+  rdfs:label "GammaOrionis" .
+
+astronomy:Ganymede a astronomy:Moon;
+  astronomy:discoveredBy "Galileo Galilei";
+  astronomy:discoveredDate "1610-01-07"^^xsd:date;
+  astronomy:hasDiameter "5268.2";
+  astronomy:hasGravity "1.428";
+  astronomy:hasLife true;
+  astronomy:hasMass "148 quintillion metric tons";
+  astronomy:hasOrbitalPeriod "7.15";
+  astronomy:hasTemperature "-121.0";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:influences astronomy:Jupiter;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:orbitsAroundPlanet astronomy:Jupiter;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:visibleFrom astronomy:Earth;
+  astronomy:visitedBy astronomy:GalileoSpacecraft;
+  rdfs:label "Ganymede" .
+
+astronomy:GiantStar a owl:Class, owl:Thing;
+  rdfs:label "GiantStar";
+  rdfs:subClassOf astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    astronomy:Star, astronomy:StellarObject, rdfs:Resource;
+  owl:sameAs astronomy:GiantStar .
+
+astronomy:Giotto a astronomy:UnmannedSpacecraft;
+  astronomy:hasActiveStatus false;
+  astronomy:hasOperator "ESA";
+  astronomy:launchDate "1985-07-02"^^xsd:date;
+  rdfs:label "Giotto" .
+
+astronomy:Goes a astronomy:ArtificialSatellite, astronomy:SpaceArtifact, astronomy:SpaceObject,
+    astronomy:WeatherSatellite, rdfs:Resource, owl:Thing;
+  astronomy:hasActiveStatus true;
+  astronomy:hasOperator "National Oceanic and Atmospheric Administration";
+  astronomy:hasOrbitType "Geostationary Orbit";
+  astronomy:launchDate "1975-10-16"^^xsd:date;
+  astronomy:launchedBy astronomy:AtlasV401, astronomy:DeltaII7925H;
+  astronomy:monitors astronomy:Earth;
+  rdfs:label "Goes";
+  owl:sameAs astronomy:Goes .
+
+astronomy:HDE226868 a astronomy:AstronomicalObject, astronomy:BlueSuperGiantStar,
+    astronomy:CelestialBody, astronomy:SpaceObject, astronomy:Star, astronomy:StellarObject,
+    astronomy:SuperGiantStar, rdfs:Resource, owl:Thing;
+  astronomy:discoveredBy "Uhuru X-ray Observatory Team";
+  astronomy:discoveredDate "1964-12-08"^^xsd:date;
+  astronomy:hasDiameter "17500000";
+  astronomy:hasGravity "15.85";
+  astronomy:hasMass "42 trillion trillion kilograms";
+  astronomy:hasPhysicalProperty "15.85", "17500000", "3726.85", "42 trillion trillion kilograms";
+  astronomy:hasTemperature "3726.85";
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:relatedTo astronomy:HubbleSpaceTelescope, astronomy:MilkyWay;
+  astronomy:spectralType "O9.7";
+  rdfs:label "HDE226868";
+  owl:sameAs astronomy:HDE226868 .
+
+astronomy:H_IIA202 a astronomy:UnmannedSpacecraft;
+  astronomy:hasActiveStatus true;
+  astronomy:hasOperator "Mitsubishi Heavy Industries";
+  astronomy:launchDate "2003-02-04"^^xsd:date;
+  rdfs:label "H_IIA202" .
+
+astronomy:Hale_Bopp a astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Comet,
+    astronomy:LongPeriodComet, astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource,
+    owl:Thing;
+  astronomy:discoveredBy "Alan Hale and Thomas Bopp";
+  astronomy:discoveredDate "1995-07-23"^^xsd:date;
+  astronomy:hasDiameter "40";
+  astronomy:hasLife false;
+  astronomy:hasMass "42 trillion metric tons";
+  astronomy:hasOrbitalPeriod "925,545";
+  astronomy:hasPhysicalProperty "-100", "40", "42 trillion metric tons";
+  astronomy:hasTemperature "-100";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:orbitsAround astronomy:Sun;
+  astronomy:orbitsAroundStar astronomy:Sun;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:passedNear astronomy:Jupiter;
+  astronomy:relatedTo astronomy:HubbleSpaceTelescope, astronomy:MilkyWay, astronomy:Sun;
+  astronomy:visibleFrom astronomy:Earth;
+  rdfs:label "Hale_Bopp";
+  owl:sameAs astronomy:Hale_Bopp .
+
+astronomy:Halley a astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Comet,
+    astronomy:PlanetaryObject, astronomy:ShortPeriodComet, astronomy:SpaceObject, rdfs:Resource,
+    owl:Thing;
+  astronomy:discoveredBy "Edmond Halley";
+  astronomy:discoveredDate "1682-01-01"^^xsd:date;
+  astronomy:hasDiameter "15";
+  astronomy:hasLife false;
+  astronomy:hasMass "22 trillion metric tons";
+  astronomy:hasOrbitalPeriod "27,740";
+  astronomy:hasPhysicalProperty "-150", "15", "22 trillion metric tons";
+  astronomy:hasTemperature "-150";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:influences astronomy:Earth;
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:orbitsAround astronomy:Sun;
+  astronomy:orbitsAroundStar astronomy:Sun;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:passedNear astronomy:Jupiter;
+  astronomy:relatedTo astronomy:Earth, astronomy:HubbleSpaceTelescope, astronomy:MilkyWay,
+    astronomy:Sun;
+  astronomy:visibleFrom astronomy:Earth;
+  astronomy:visitedBy astronomy:Giotto;
+  rdfs:label "Halley";
+  owl:sameAs astronomy:Halley .
+
+astronomy:Haumea a astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:DwarfPlanet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource, owl:Thing;
+  astronomy:discoveredBy "Mike Brown, Chad Trujillo and David Rabinowitz";
+  astronomy:discoveredDate "2004-01-01"^^xsd:date;
+  astronomy:hasDiameter "1632";
+  astronomy:hasGravity "0.044";
+  astronomy:hasLife false;
+  astronomy:hasMass "420 quintillion metric tons";
+  astronomy:hasOrbitalPeriod "285";
+  astronomy:hasPhysicalProperty "-241", "0.044", "1632", "420 quintillion metric tons";
+  astronomy:hasTemperature "-241";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:orbitsAround astronomy:Sun;
+  astronomy:orbitsAroundStar astronomy:Sun;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:relatedTo astronomy:HubbleSpaceTelescope, astronomy:MilkyWay, astronomy:Sun;
+  rdfs:label "Haumea";
+  owl:sameAs astronomy:Haumea .
+
+astronomy:Holm15A a astronomy:SupermassiveBlackHole;
+  astronomy:discoveredBy "Researchers at the Max Planck Institute for Extraterrestrial Physics";
+  astronomy:discoveredDate "2019-06-06"^^xsd:date;
+  astronomy:hasDiameter "1600000000";
+  astronomy:hasMass "40 quintillion quintillion metric tons";
+  astronomy:hasSpin 0.3;
+  astronomy:hasTemperature "7000000";
+  rdfs:label "Holm 15A" .
+
+astronomy:HubbleSpaceTelescope a astronomy:SpaceArtifact, astronomy:SpaceObject, astronomy:Telescope,
+    rdfs:Resource, owl:Thing;
+  astronomy:hasActiveStatus true;
+  astronomy:hasFocalLength 57.6;
+  astronomy:hasOperator "NASA";
+  astronomy:launchDate "1990-04-24"^^xsd:date;
+  rdfs:label "HubbleSpaceTelescope";
+  owl:sameAs astronomy:HubbleSpaceTelescope .
+
+astronomy:InSight a astronomy:ArtificialSatellite, astronomy:SpaceArtifact, astronomy:SpaceObject,
+    rdfs:Resource, owl:Thing;
+  astronomy:hasActiveStatus true;
+  astronomy:hasOperator "NASA";
+  astronomy:launchDate "2018-05-05"^^xsd:date;
+  astronomy:launchedBy astronomy:AtlasV401;
+  rdfs:label "InSight";
+  owl:sameAs astronomy:InSight .
+
+astronomy:InternationalSpaceStation a astronomy:SpaceArtifact, astronomy:SpaceObject,
+    astronomy:SpaceStation, rdfs:Resource, owl:Thing;
+  astronomy:hasActiveStatus true;
+  astronomy:hasAltitudeFromEarth 400.0;
+  astronomy:hasOperator "NASA";
+  astronomy:hasOrbitalSpeed 28000.0;
+  astronomy:launchDate "1998-11-20"^^xsd:date;
+  rdfs:label "InternationalSpaceStation";
+  owl:sameAs astronomy:InternationalSpaceStation .
+
+astronomy:Io a astronomy:Moon;
+  astronomy:discoveredBy "Galileo Galilei";
+  astronomy:discoveredDate "1610-01-07"^^xsd:date;
+  astronomy:hasDiameter "3643.2";
+  astronomy:hasGravity "1.796";
+  astronomy:hasLife false;
+  astronomy:hasMass "89.3 quintillion metric tons";
+  astronomy:hasOrbitalPeriod "1.769";
+  astronomy:hasTemperature "1000";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:influences astronomy:Jupiter;
+  astronomy:observedBySpacecraft astronomy:HubbleSpaceTelescope;
+  astronomy:orbitsAroundPlanet astronomy:Jupiter;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:visibleFrom astronomy:Earth;
+  astronomy:visitedBy astronomy:GalileoSpacecraft;
+  rdfs:label "Callisto" .
+
+astronomy:Iridium a astronomy:ArtificialSatellite, astronomy:CommunicationSatellite,
+    astronomy:SpaceArtifact, astronomy:SpaceObject, rdfs:Resource, owl:Thing;
+  astronomy:hasActiveStatus true;
+  astronomy:hasOperator "Iridium Communications Inc.";
+  astronomy:hasOrbitType "Low Earth Orbit";
+  astronomy:launchDate "1997-01-01"^^xsd:date;
+  astronomy:launchedBy astronomy:DeltaII7925H;
+  rdfs:label "Iridium";
+  owl:sameAs astronomy:Iridium .
+
+astronomy:Juno a astronomy:UnmannedSpacecraft;
+  astronomy:hasActiveStatus true;
+  astronomy:hasOperator "NASA";
+  astronomy:launchDate "2011-08-05"^^xsd:date;
+  rdfs:label "Juno" .
+
+astronomy:Jupiter a astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Planet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource, owl:Thing;
+  astronomy:collidedWith astronomy:Shoemaker-Levy_9;
+  astronomy:discoveredBy "Galileo Galilei";
+  astronomy:discoveredDate "1610-01-01"^^xsd:date;
+  astronomy:hasColor "white,brown and red";
+  astronomy:hasDiameter "139820";
+  astronomy:hasGravity "24.79";
+  astronomy:hasLife false;
+  astronomy:hasMass "1,898,000,000,000,000 quadrillion metric tons";
+  astronomy:hasOrbitalPeriod "4321,6";
+  astronomy:hasPhysicalProperty "-108", "1,898,000,000,000,000 quadrillion metric tons",
+    "139820", "24.79", "white,brown and red";
+  astronomy:hasSatellite astronomy:Europa, astronomy:Ganymede;
+  astronomy:hasTemperature "-108";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:orbitsAround astronomy:Sun;
+  astronomy:orbitsAroundStar astronomy:Sun;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:relatedTo astronomy:HubbleSpaceTelescope, astronomy:MilkyWay, astronomy:Sun;
+  astronomy:visibleFrom astronomy:Earth;
+  astronomy:visitedBy astronomy:GalileoSpacecraft, astronomy:Juno;
+  rdfs:label "Jupiter";
+  owl:sameAs astronomy:Jupiter .
+
+astronomy:Kepler a astronomy:Supernova;
+  astronomy:hasBrightness -2.5;
+  astronomy:hasDuration "525600"^^xsd:int;
+  astronomy:observedFrom astronomy:Earth;
+  astronomy:visibleToNakedEye true;
+  astronomy:wasObservedOn "1604-10-09"^^xsd:date;
+  rdfs:label "Kepler" .
+
+astronomy:LongPeriodComet a owl:Class, owl:Thing;
+  rdfs:label "LongPeriodComet";
+  rdfs:subClassOf astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Comet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource;
+  owl:sameAs astronomy:LongPeriodComet .
+
+astronomy:LunarEclipse a owl:Class, owl:Thing;
+  rdfs:label "LunarEclipse";
+  rdfs:subClassOf astronomy:AstronomicalPhenomenon, astronomy:Eclipse, rdfs:Resource;
+  owl:sameAs astronomy:LunarEclipse .
+
+astronomy:LunarReconnaissanceOrbiter a astronomy:SpaceArtifact, astronomy:SpaceObject,
+    astronomy:Telescope, rdfs:Resource, owl:Thing;
+  astronomy:hasActiveStatus true;
+  astronomy:hasFocalLength 0.8;
+  astronomy:hasOperator "NASA";
+  astronomy:launchDate "2009-06-18"^^xsd:date;
+  rdfs:label "LunarReconnaissanceOrbiter";
+  owl:sameAs astronomy:LunarReconnaissanceOrbiter .
+
+astronomy:M31 a astronomy:SupermassiveBlackHole;
+  astronomy:discoveredBy "Karl Jansky";
+  astronomy:discoveredDate "1963-01-01"^^xsd:date;
+  astronomy:hasDiameter "283800000000";
+  astronomy:hasMass "40 quadrillion metric tons";
+  astronomy:hasTemperature "100000000";
+  astronomy:influences astronomy:Andromeda;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:partOfGalaxy astronomy:Andromeda;
+  rdfs:label "M31" .
+
+astronomy:M97 a astronomy:SupermassiveBlackHole;
+  astronomy:discoveredBy "Heino Falcke";
+  astronomy:discoveredDate "2019-04-10"^^xsd:date;
+  astronomy:hasDiameter "40000000000";
+  astronomy:hasMass "117 quadrillion quadrillion metric tons";
+  astronomy:hasSpin 0.9;
+  astronomy:hasTemperature "1000000";
+  astronomy:observedByTelescope astronomy:EventHorizonTelescope;
+  astronomy:partOfGalaxy astronomy:Messier87;
+  rdfs:label "M87" .
+
+astronomy:MESSENGER a astronomy:ArtificialSatellite, astronomy:SpaceArtifact, astronomy:SpaceObject,
+    rdfs:Resource, owl:Thing;
+  astronomy:hasActiveStatus false;
+  astronomy:hasOperator "NASA";
+  astronomy:hasOrbitType "Elliptical";
+  astronomy:launchDate "2004-08-03"^^xsd:date;
+  astronomy:launchedBy astronomy:DeltaII7925H;
+  rdfs:label "MESSENGER";
+  owl:sameAs astronomy:MESSENGER .
+
+astronomy:MESSENGERSpacecraft a astronomy:UnmannedSpacecraft;
+  astronomy:hasActiveStatus true;
+  astronomy:hasOperator "NASA";
+  astronomy:launchDate "2004-08-03"^^xsd:date;
+  rdfs:label "MESSENGER" .
+
+astronomy:MagellanSpacecraft a astronomy:UnmannedSpacecraft;
+  astronomy:hasActiveStatus false;
+  astronomy:hasOperator "NASA";
+  astronomy:launchDate "1989-05-04"^^xsd:date;
+  rdfs:label "MagellanSpacecraft" .
+
+astronomy:MainSequenceStar a owl:Class, owl:Thing;
+  rdfs:label "MainSequenceStar";
+  rdfs:subClassOf astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    astronomy:Star, astronomy:StellarObject, rdfs:Resource;
+  owl:sameAs astronomy:MainSequenceStar .
+
+astronomy:Makemake a astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:DwarfPlanet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource, owl:Thing;
+  astronomy:discoveredBy "Mike Brown, Chad Trujillo and David Rabinowitz";
+  astronomy:discoveredDate "2005-03-31"^^xsd:date;
+  astronomy:hasDiameter "1430";
+  astronomy:hasGravity "0.05";
+  astronomy:hasLife false;
+  astronomy:hasMass "3 quintillion metric tons";
+  astronomy:hasOrbitalPeriod "310";
+  astronomy:hasPhysicalProperty "-239", "0.05", "1430", "3 quintillion metric tons";
+  astronomy:hasTemperature "-239";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:orbitsAround astronomy:Sun;
+  astronomy:orbitsAroundStar astronomy:Sun;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:relatedTo astronomy:HubbleSpaceTelescope, astronomy:MilkyWay, astronomy:Sun;
+  rdfs:label "Makemake";
+  owl:sameAs astronomy:Makemake .
+
+astronomy:MannedSpacecraft a owl:Class, owl:Thing;
+  rdfs:label "MannedSpacecraft";
+  rdfs:subClassOf astronomy:SpaceArtifact, astronomy:SpaceObject, astronomy:Spacecraft,
+    rdfs:Resource;
+  owl:sameAs astronomy:MannedSpacecraft .
+
+astronomy:Mariner9 a astronomy:SpaceArtifact, astronomy:SpaceObject, astronomy:Spacecraft,
+    astronomy:UnmannedSpacecraft, rdfs:Resource, owl:Thing;
+  astronomy:hasActiveStatus false;
+  astronomy:hasOperator "NASA";
+  astronomy:launchDate "1971-05-30"^^xsd:date;
+  rdfs:label "Mariner9";
+  owl:sameAs astronomy:Mariner9 .
+
+astronomy:Mars astronomy:discoveredBy "Unknown";
+  astronomy:hasArtificialSatellite astronomy:InSight;
+  astronomy:hasColor "red";
+  astronomy:hasDiameter "6779";
+  astronomy:hasGravity "3.71";
+  astronomy:hasLife false;
+  astronomy:hasMass "641,710,000,000 metric tons";
+  astronomy:hasOrbitalPeriod "687";
+  astronomy:hasPhysicalProperty "-63", "3.71", "641,710,000,000 metric tons", "6779";
+  a astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Planet, astronomy:PlanetaryObject,
+    astronomy:SpaceObject, rdfs:Resource, owl:Thing;
+  astronomy:hasPhysicalProperty "red";
+  astronomy:hasSatellite astronomy:Phobos;
+  astronomy:hasTemperature "-63";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:influences astronomy:Earth, astronomy:Jupiter;
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:orbitsAround astronomy:Sun;
+  astronomy:orbitsAroundStar astronomy:Sun;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:relatedTo astronomy:Earth, astronomy:HubbleSpaceTelescope, astronomy:Jupiter,
+    astronomy:MilkyWay, astronomy:Sun;
+  astronomy:visibleFrom astronomy:Earth;
+  astronomy:visitedBy astronomy:Viking;
+  rdfs:label "Mars";
+  owl:sameAs astronomy:Mars .
+
+astronomy:MarsExpress a astronomy:SpaceArtifact, astronomy:SpaceObject, astronomy:Spacecraft,
+    astronomy:UnmannedSpacecraft, rdfs:Resource, owl:Thing;
+  astronomy:hasActiveStatus true;
+  astronomy:hasOperator "ESA";
+  astronomy:launchDate "2003-06-02"^^xsd:date;
+  rdfs:label "MarsExpress";
+  owl:sameAs astronomy:MarsExpress .
+
+astronomy:MarsReconnaissanceOrbiter a astronomy:SpaceArtifact, astronomy:SpaceObject,
+    astronomy:Telescope, rdfs:Resource, owl:Thing;
+  astronomy:hasActiveStatus true;
+  astronomy:hasFocalLength 6.1;
+  astronomy:hasOperator "NASA";
+  astronomy:launchDate "2005-08-12"^^xsd:date;
+  rdfs:label "MarsReconnaissanceOrbiter";
+  owl:sameAs astronomy:MarsReconnaissanceOrbiter .
+
+astronomy:Mercury a astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Planet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource, owl:Thing;
+  astronomy:discoveredBy "Unknown";
+  astronomy:hasArtificialSatellite astronomy:MESSENGER;
+  astronomy:hasColor "Grey";
+  astronomy:hasDiameter "4880";
+  astronomy:hasGravity "3.7";
+  astronomy:hasLife false;
+  astronomy:hasMass "330,110,000,000 metric tons";
+  astronomy:hasOrbitalPeriod "87.97";
+  astronomy:hasPhysicalProperty "3.7", "330,110,000,000 metric tons", "427", "4880",
+    "Grey";
+  astronomy:hasTemperature "427";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:orbitsAround astronomy:Sun;
+  astronomy:orbitsAroundStar astronomy:Sun;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:relatedTo astronomy:MilkyWay, astronomy:Sun;
+  astronomy:visibleFrom astronomy:Earth;
+  astronomy:visitedBy astronomy:MESSENGERSpacecraft;
+  rdfs:label "Mercury";
+  owl:sameAs astronomy:Mercury .
+
+astronomy:Messier87 a astronomy:AstronomicalObject, astronomy:Elliptical, astronomy:Galaxy,
+    astronomy:SpaceObject, rdfs:Resource, owl:Thing;
+  astronomy:discoveredBy "Charles Messier";
+  astronomy:discoveredDate "1781-03-18"^^xsd:date;
+  astronomy:hasGalacticCenter astronomy:M97;
+  astronomy:observedBy astronomy:EventHorizonTelescope, astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:EventHorizonTelescope, astronomy:HubbleSpaceTelescope;
+  astronomy:relatedTo astronomy:EventHorizonTelescope, astronomy:HubbleSpaceTelescope;
+  rdfs:label "Messier87";
+  owl:sameAs astronomy:Messier87 .
+
+astronomy:MilkyWay a astronomy:AstronomicalObject, astronomy:Galaxy, astronomy:SpaceObject,
+    astronomy:Spiral, rdfs:Resource, owl:Thing;
+  astronomy:discoveredBy "Galileo Galilei";
+  astronomy:discoveredDate "1610-01-01"^^xsd:date;
+  astronomy:hasGalacticCenter astronomy:SagittariusA;
+  astronomy:observedBy astronomy:EventHorizonTelescope, astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:EventHorizonTelescope, astronomy:HubbleSpaceTelescope;
+  astronomy:relatedTo astronomy:EventHorizonTelescope, astronomy:HubbleSpaceTelescope;
+  rdfs:label "MilkyWay";
+  owl:sameAs astronomy:MilkyWay .
+
+astronomy:Miranda a astronomy:Moon;
+  astronomy:discoveredBy "Gerard Kuiper";
+  astronomy:discoveredDate "1948-02-16"^^xsd:date;
+  astronomy:hasDiameter "471.6";
+  astronomy:hasGravity "0.079";
+  astronomy:hasLife false;
+  astronomy:hasMass "65.9 million trillion kilograms";
+  astronomy:hasOrbitalPeriod "1.413";
+  astronomy:hasTemperature "-187.0";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:influences astronomy:Uranus;
+  astronomy:observedBySpacecraft astronomy:Voyager2;
+  astronomy:orbitsAroundPlanet astronomy:Uranus;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:visibleFrom astronomy:Earth;
+  astronomy:visitedBy astronomy:Voyager2;
+  rdfs:label "Miranda" .
+
+astronomy:Moon a owl:Class, owl:Thing;
+  rdfs:label "Moon";
+  rdfs:subClassOf _:node1ih8ps2max6, astronomy:AstronomicalObject, astronomy:CelestialBody,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource;
+  owl:sameAs astronomy:Moon .
+
+astronomy:NEOWISE a astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Comet,
+    astronomy:LongPeriodComet, astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource,
+    owl:Thing;
+  astronomy:discoveredBy "Karen Meech";
+  astronomy:discoveredDate "2020-03-27"^^xsd:date;
+  astronomy:hasDiameter "5";
+  astronomy:hasLife false;
+  astronomy:hasMass "37 trillion metric tons";
+  astronomy:hasOrbitalPeriod "2,471,590";
+  astronomy:hasPhysicalProperty "-110", "37 trillion metric tons", "5";
+  astronomy:hasTemperature "-110";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:orbitsAround astronomy:Sun;
+  astronomy:orbitsAroundStar astronomy:Sun;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:passedNear astronomy:Earth;
+  astronomy:relatedTo astronomy:HubbleSpaceTelescope, astronomy:MilkyWay, astronomy:Sun;
+  astronomy:visibleFrom astronomy:Earth;
+  rdfs:label "NEOWISE";
+  owl:sameAs astronomy:NEOWISE .
+
+astronomy:NGC1277 a astronomy:SupermassiveBlackHole;
+  astronomy:discoveredBy "Remco van den Bosch and team";
+  astronomy:discoveredDate "2012-11-28"^^xsd:date;
+  astronomy:hasDiameter "1400000000";
+  astronomy:hasMass "20 quintillion quintillion metric tons";
+  astronomy:hasSpin 0.5;
+  astronomy:hasTemperature "5000000";
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  rdfs:label "NGC1277" .
+
+astronomy:NGC4889 a astronomy:SupermassiveBlackHole;
+  astronomy:discoveredBy "Edwin Hubble";
+  astronomy:discoveredDate "1935-03-12"^^xsd:date;
+  astronomy:hasDiameter "8700000000";
+  astronomy:hasMass "21 quintillion quintillion metric tons";
+  astronomy:hasSpin 0.5;
+  astronomy:hasTemperature "2000000";
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  rdfs:label "NGC4889" .
+
+astronomy:NavigationSatellite a owl:Class, owl:Thing;
+  rdfs:label "NavigationSatellite";
+  rdfs:subClassOf astronomy:ArtificialSatellite, astronomy:SpaceArtifact, astronomy:SpaceObject,
+    rdfs:Resource;
+  owl:sameAs astronomy:NavigationSatellite .
+
+astronomy:Neptune a astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Planet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource, owl:Thing;
+  astronomy:discoveredBy "Johann Galle";
+  astronomy:discoveredDate "1846-09-23"^^xsd:date;
+  astronomy:hasColor "blue";
+  astronomy:hasDiameter "49244";
+  astronomy:hasGravity "11.15";
+  astronomy:hasLife false;
+  astronomy:hasMass "102,400,000,000,000 quadrillion metric tons";
+  astronomy:hasOrbitalPeriod "60225";
+  astronomy:hasPhysicalProperty "-2.18", "102,400,000,000,000 quadrillion metric tons",
+    "11.15", "49244", "blue";
+  astronomy:hasSatellite astronomy:Triton;
+  astronomy:hasTemperature "-2.18";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:orbitsAround astronomy:Sun;
+  astronomy:orbitsAroundStar astronomy:Sun;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:relatedTo astronomy:HubbleSpaceTelescope, astronomy:MilkyWay, astronomy:Sun;
+  astronomy:visibleFrom astronomy:Earth;
+  astronomy:visitedBy astronomy:Voyager2;
+  rdfs:label "Neptume";
+  owl:sameAs astronomy:Neptune .
+
+astronomy:NewHorizons a astronomy:UnmannedSpacecraft;
+  astronomy:hasActiveStatus true;
+  astronomy:hasOperator "NASA";
+  astronomy:launchDate "2006-01-19"^^xsd:date;
+  rdfs:label "NewHorizons" .
+
+astronomy:PKS0745 a astronomy:SupermassiveBlackHole;
+  astronomy:discoveredBy "Astronomers";
+  astronomy:discoveredDate "1986-09-20"^^xsd:date;
+  astronomy:hasDiameter "4600000000";
+  astronomy:hasMass "3 quintillion quintillion metric tons";
+  astronomy:hasTemperature "5000000";
+  rdfs:label "PKS0745" .
+
+astronomy:Phobos a astronomy:Moon;
+  astronomy:discoveredBy "Asaph Hall";
+  astronomy:discoveredDate "1877-08-18"^^xsd:date;
+  astronomy:hasDiameter "22.4";
+  astronomy:hasGravity "0.0057";
+  astronomy:hasLife false;
+  astronomy:hasMass "10.8 trillion metric tons";
+  astronomy:hasOrbitalPeriod "0.3";
+  astronomy:hasTemperature "-4.0";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:influences astronomy:Mars;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope, astronomy:MarsReconnaissanceOrbite;
+  astronomy:orbitsAroundPlanet astronomy:Mars;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:visibleFrom astronomy:Earth;
+  astronomy:visitedBy astronomy:Mariner2, astronomy:MarsExpress;
+  rdfs:label "Phobos" .
+
+astronomy:Planet a owl:Class, owl:Thing;
+  rdfs:label "Planet";
+  rdfs:subClassOf _:node1ih8ps2max4, _:node1ih8ps2max5, astronomy:AstronomicalObject,
+    astronomy:CelestialBody, astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource;
+  owl:sameAs astronomy:Planet .
+
+astronomy:PlanetaryObject a owl:Class, owl:Thing;
+  rdfs:label "PlanetaryObject";
+  rdfs:subClassOf _:node1ih8ps2max3, astronomy:AstronomicalObject, astronomy:CelestialBody,
+    astronomy:SpaceObject, rdfs:Resource;
+  owl:sameAs astronomy:PlanetaryObject .
+
+astronomy:Pluto a astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:DwarfPlanet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource, owl:Thing;
+  astronomy:discoveredBy "Clyde Tombaugh";
+  astronomy:discoveredDate "1930-02-18"^^xsd:date;
+  astronomy:hasDiameter "2377";
+  astronomy:hasGravity "0.62";
+  astronomy:hasLife false;
+  astronomy:hasMass "1.303 quintillion metric tons";
+  astronomy:hasOrbitalPeriod "248";
+  astronomy:hasPhysicalProperty "-229", "0.62", "1.303 quintillion metric tons", "2377";
+  astronomy:hasTemperature "-229";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:orbitsAround astronomy:Sun;
+  astronomy:orbitsAroundStar astronomy:Sun;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:relatedTo astronomy:HubbleSpaceTelescope, astronomy:MilkyWay, astronomy:Sun;
+  astronomy:visitedBy astronomy:NewHorizons;
+  rdfs:label "Pluto";
+  owl:sameAs astronomy:Pluto .
+
+astronomy:ProximaCentauri a astronomy:AstronomicalObject, astronomy:CelestialBody,
+    astronomy:MainSequenceStar, astronomy:SpaceObject, astronomy:Star, astronomy:StellarObject,
+    rdfs:Resource, owl:Thing;
+  astronomy:discoveredBy "Robert T.A. Innes";
+  astronomy:discoveredDate "1915-10-18"^^xsd:date;
+  astronomy:hasDiameter "200000";
+  astronomy:hasGravity "12.2";
+  astronomy:hasMass "216 quadrillion metric tons";
+  astronomy:hasPhysicalProperty "12.2", "200000", "216 quadrillion metric tons", "3042";
+  astronomy:hasTemperature "3042";
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:relatedTo astronomy:HubbleSpaceTelescope, astronomy:MilkyWay;
+  astronomy:spectralType "M5.5Ve";
+  rdfs:label "ProximaCentauri";
+  owl:sameAs astronomy:ProximaCentauri .
+
+astronomy:RedGiantStar a owl:Class, owl:Thing;
+  rdfs:label "RedGiantStar";
+  rdfs:subClassOf astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:GiantStar,
+    astronomy:SpaceObject, astronomy:Star, astronomy:StellarObject, rdfs:Resource;
+  owl:sameAs astronomy:RedGiantStar .
+
+astronomy:RedSuperGiantStar a owl:Class, owl:Thing;
+  rdfs:label "RedSuperGiantStar";
+  rdfs:subClassOf astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    astronomy:Star, astronomy:StellarObject, astronomy:SuperGiantStar, rdfs:Resource;
+  owl:sameAs astronomy:RedSuperGiantStar .
+
+astronomy:Regulus a astronomy:BlueGiantStar;
+  astronomy:discoveredBy "Ancient Astronomers";
+  astronomy:hasDiameter "4300000";
+  astronomy:hasGravity "15000";
+  astronomy:hasMass "5 quintillion metric tons";
+  astronomy:hasTemperature "12000";
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:spectralType "B7_V";
+  rdfs:label "Regulus" .
+
+astronomy:SN1006 a astronomy:Supernova;
+  astronomy:hasBrightness -7.5;
+  astronomy:hasDuration "100800"^^xsd:int;
+  astronomy:observedFrom astronomy:Earth;
+  astronomy:visibleToNakedEye true;
+  astronomy:wasObservedOn "1006-04-30"^^xsd:date;
+  rdfs:label "SN1006" .
+
+astronomy:SN1181 a astronomy:Supernova;
+  astronomy:hasBrightness -1.0;
+  astronomy:hasDuration "266400"^^xsd:int;
+  astronomy:observedFrom astronomy:Earth;
+  astronomy:visibleToNakedEye true;
+  astronomy:wasObservedOn "1181-08-06"^^xsd:date;
+  rdfs:label "SN1181" .
+
+astronomy:SN1987A a astronomy:Supernova;
+  astronomy:hasBrightness 3.0;
+  astronomy:hasDuration "86400"^^xsd:int;
+  astronomy:observedFrom astronomy:Earth;
+  astronomy:visibleToNakedEye true;
+  astronomy:wasObservedOn "1987-02-23"^^xsd:date;
+  rdfs:label "SN1987A" .
+
+astronomy:SN1993J a astronomy:Supernova;
+  astronomy:hasBrightness 10.0;
+  astronomy:hasDuration "259200"^^xsd:int;
+  astronomy:observedFrom astronomy:Earth;
+  astronomy:visibleToNakedEye false;
+  astronomy:wasObservedOn "1993-03-28"^^xsd:date;
+  rdfs:label "SN1993J" .
+
+astronomy:SN2006gy a astronomy:Supernova;
+  astronomy:hasBrightness 14.0;
+  astronomy:hasDuration "100800"^^xsd:int;
+  astronomy:observedFrom astronomy:Earth;
+  astronomy:visibleToNakedEye false;
+  astronomy:wasObservedOn "2006-09-18"^^xsd:date;
+  rdfs:label "SN 2006gy" .
+
+astronomy:SagittariusA a astronomy:SupermassiveBlackHole;
+  astronomy:discoveredBy "Reinhard Genzel and Andrea Ghez";
+  astronomy:discoveredDate "1974-01-01"^^xsd:date;
+  astronomy:hasDiameter "44000000";
+  astronomy:hasMass "7,956,000,000,000 quadrillion metric tons";
+  astronomy:hasTemperature "100000000";
+  astronomy:influences astronomy:MilkyWay;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  rdfs:label "SagittariusA*" .
+
+astronomy:Saturn a astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Planet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource, owl:Thing;
+  astronomy:discoveredBy "Galileo Galilei";
+  astronomy:discoveredDate "1610-01-01"^^xsd:date;
+  astronomy:hasColor "yellow";
+  astronomy:hasDiameter "161460";
+  astronomy:hasGravity "10.44";
+  astronomy:hasLife false;
+  astronomy:hasMass "568,300,000,000,000 quadrillion metric tons";
+  astronomy:hasOrbitalPeriod "10752,9";
+  astronomy:hasPhysicalProperty "-178", "10.44", "161460", "568,300,000,000,000 quadrillion metric tons",
+    "yellow";
+  astronomy:hasSatellite astronomy:Enceladus, astronomy:Titan;
+  astronomy:hasTemperature "-178";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:influences astronomy:Enceladus, astronomy:Titan;
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:orbitsAround astronomy:Sun;
+  astronomy:orbitsAroundStar astronomy:Sun;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:relatedTo astronomy:HubbleSpaceTelescope, astronomy:MilkyWay, astronomy:Sun;
+  astronomy:visibleFrom astronomy:Earth;
+  astronomy:visitedBy astronomy:Cassini-Huygens_Mission;
+  rdfs:label "Saturn";
+  owl:sameAs astronomy:Saturn .
+
+astronomy:Shaula a astronomy:BlueGiantStar;
+  astronomy:discoveredBy "Ptolemy";
+  astronomy:hasDiameter "15300000";
+  astronomy:hasGravity "4000";
+  astronomy:hasMass "15 quintillion metric tons";
+  astronomy:hasTemperature "25000";
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:spectralType "B2_IV";
+  rdfs:label "Shaula" .
+
+astronomy:Shoemaker-Levy_9 a astronomy:AstronomicalObject, astronomy:CelestialBody,
+    astronomy:Comet, astronomy:PlanetaryObject, astronomy:ShortPeriodComet, astronomy:SpaceObject,
+    rdfs:Resource, owl:Thing;
+  astronomy:collidedWith astronomy:Jupiter;
+  astronomy:discoveredBy "Carolyn Shoemaker, Eugene Shoemaker and David Levy";
+  astronomy:discoveredDate "1993-03-24"^^xsd:date;
+  astronomy:hasDiameter "2";
+  astronomy:hasLife false;
+  astronomy:hasMass "4 trillion metric tons";
+  astronomy:hasOrbitalPeriod "2372.5";
+  astronomy:hasPhysicalProperty "-200", "2", "4 trillion metric tons";
+  astronomy:hasTemperature "-200";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:influences astronomy:Jupiter;
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:orbitsAround astronomy:Sun;
+  astronomy:orbitsAroundStar astronomy:Sun;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:passedNear astronomy:Jupiter;
+  astronomy:relatedTo astronomy:HubbleSpaceTelescope, astronomy:Jupiter, astronomy:MilkyWay,
+    astronomy:Sun;
+  astronomy:visibleFrom astronomy:Earth;
+  rdfs:label "Shoemaker-Levy 9";
+  owl:sameAs astronomy:Shoemaker-Levy_9 .
+
+astronomy:ShortPeriodComet a owl:Class, owl:Thing;
+  rdfs:label "ShortPeriodComet";
+  rdfs:subClassOf astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Comet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource;
+  owl:sameAs astronomy:ShortPeriodComet .
+
+astronomy:Skylab a astronomy:SpaceArtifact, astronomy:SpaceObject, astronomy:SpaceStation,
+    rdfs:Resource, owl:Thing;
+  astronomy:hasActiveStatus false;
+  astronomy:hasAltitudeFromEarth 435.0;
+  astronomy:hasOperator "NASA";
+  astronomy:hasOrbitalSpeed 28000.0;
+  astronomy:launchDate "1973-05-14"^^xsd:date;
+  owl:sameAs astronomy:Skylab .
+
+astronomy:SolarAndHeliosphericObservatory a astronomy:SpaceArtifact, astronomy:SpaceObject,
+    astronomy:Telescope, rdfs:Resource, owl:Thing;
+  astronomy:hasActiveStatus true;
+  astronomy:hasFocalLength 1.3;
+  astronomy:hasOperator "NASA and ESA";
+  astronomy:launchDate "1995-12-02"^^xsd:date;
+  rdfs:label "SolarAndHeliosphericObservatory";
+  owl:sameAs astronomy:SolarAndHeliosphericObservatory .
+
+astronomy:SolarEclipse a owl:Class, owl:Thing;
+  rdfs:label "SolarEclipse";
+  rdfs:subClassOf astronomy:AstronomicalPhenomenon, astronomy:Eclipse, rdfs:Resource;
+  owl:sameAs astronomy:SolarEclipse .
+
+astronomy:SpaceArtifact a owl:Class, owl:Thing;
+  rdfs:label "SpaceArtifact";
+  rdfs:subClassOf astronomy:SpaceObject, rdfs:Resource;
+  owl:sameAs astronomy:SpaceArtifact .
+
+astronomy:SpaceObject a owl:Class, owl:Thing;
+  rdfs:label "SpaceObject";
+  rdfs:subClassOf rdfs:Resource;
+  owl:sameAs astronomy:SpaceObject .
+
+astronomy:SpaceStation a owl:Class, owl:Thing;
+  rdfs:label "SpaceStation";
+  rdfs:subClassOf astronomy:SpaceArtifact, astronomy:SpaceObject, rdfs:Resource;
+  owl:sameAs astronomy:SpaceStation .
+
+astronomy:SpaceXCrewDragonFreedom a astronomy:MannedSpacecraft, astronomy:SpaceArtifact,
+    astronomy:SpaceObject, astronomy:Spacecraft, rdfs:Resource, owl:Thing;
+  astronomy:dockedAt astronomy:InternationalSpaceStation;
+  astronomy:hasActiveStatus true;
+  astronomy:hasCrewCapacity 4;
+  astronomy:hasOperator "NASA";
+  astronomy:launchDate "2024-03-05"^^xsd:date;
+  owl:sameAs astronomy:SpaceXCrewDragonFreedom .
+
+astronomy:Spacecraft a owl:Class, owl:Thing;
+  rdfs:label "Spacecraft";
+  rdfs:subClassOf astronomy:SpaceArtifact, astronomy:SpaceObject, rdfs:Resource;
+  owl:sameAs astronomy:Spacecraft .
+
+astronomy:SpicaA a astronomy:BlueGiantStar;
+  astronomy:discoveredBy "Greeks";
+  astronomy:hasDiameter "11000000";
+  astronomy:hasGravity "14000";
+  astronomy:hasMass "12.3 sextillion metric tons";
+  astronomy:hasTemperature "25300";
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:spectralType "B1_III_IV";
+  rdfs:label "SpicaA" .
+
+astronomy:Spiral a owl:Class, owl:Thing;
+  rdfs:label "Spiral";
+  rdfs:subClassOf astronomy:AstronomicalObject, astronomy:Galaxy, astronomy:SpaceObject,
+    rdfs:Resource;
+  owl:sameAs astronomy:Spiral .
+
+astronomy:Star a owl:Class, owl:Thing;
+  rdfs:label "Star";
+  rdfs:subClassOf _:node1ih8ps2max1, astronomy:AstronomicalObject, astronomy:CelestialBody,
+    astronomy:SpaceObject, astronomy:StellarObject, rdfs:Resource;
+  owl:sameAs astronomy:Star .
+
+astronomy:StellarBlackHole a owl:Class, owl:Thing;
+  rdfs:label "StellarBlackHole";
+  rdfs:subClassOf astronomy:AstronomicalObject, astronomy:BlackHole, astronomy:CelestialBody,
+    astronomy:SpaceObject, astronomy:StellarObject, rdfs:Resource;
+  owl:sameAs astronomy:StellarBlackHole .
+
+astronomy:StellarObject a owl:Class, owl:Thing;
+  rdfs:label "StellarObject";
+  rdfs:subClassOf _:node1ih8ps2max2, astronomy:AstronomicalObject, astronomy:CelestialBody,
+    astronomy:SpaceObject, rdfs:Resource;
+  owl:sameAs astronomy:StellarObject .
+
+astronomy:Sun a astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:MainSequenceStar,
+    astronomy:SpaceObject, astronomy:Star, astronomy:StellarObject, rdfs:Resource, owl:Thing;
+  astronomy:hasDiameter "139100";
+  astronomy:hasGravity "274";
+  astronomy:hasMass "1.989 nonillion metric tons";
+  astronomy:hasPhysicalProperty "1.989 nonillion metric tons", "139100", "274", "5500";
+  astronomy:hasTemperature "5500";
+  astronomy:influences astronomy:Earth, astronomy:Eris, astronomy:Halley, astronomy:Haumea,
+    astronomy:Jupiter, astronomy:Makemake, astronomy:Mars, astronomy:Mercury, astronomy:NEOWISE,
+    astronomy:Neptune, astronomy:Pluto, astronomy:Saturn, astronomy:Uranus, astronomy:Venus;
+  astronomy:observedBy astronomy:SolarAndHeliosphericObservatory;
+  astronomy:observedByTelescope astronomy:SolarAndHeliosphericObservatory;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:relatedTo astronomy:Earth, astronomy:Eris, astronomy:Halley, astronomy:Haumea,
+    astronomy:Jupiter, astronomy:Makemake, astronomy:Mars, astronomy:Mercury, astronomy:MilkyWay,
+    astronomy:NEOWISE, astronomy:Neptune, astronomy:Pluto, astronomy:Saturn, astronomy:SolarAndHeliosphericObservatory,
+    astronomy:Uranus, astronomy:Venus;
+  astronomy:spectralType "G2V";
+  astronomy:surroundedBy astronomy:Earth, astronomy:EarthMoon, astronomy:Enceladus,
+    astronomy:Eris, astronomy:Europa, astronomy:Ganymede, astronomy:Halley, astronomy:Haumea,
+    astronomy:Jupiter, astronomy:Makemake, astronomy:Mars, astronomy:Mercury, astronomy:Miranda,
+    astronomy:NEOWISE, astronomy:Neptune, astronomy:Phobos, astronomy:Pluto, astronomy:Saturn,
+    astronomy:Titan, astronomy:Triton, astronomy:Uranus, astronomy:Venus;
+  rdfs:label "Sun";
+  owl:sameAs astronomy:Sun .
+
+astronomy:SuperGiantStar a owl:Class, owl:Thing;
+  rdfs:label "SuperGiantStar";
+  rdfs:subClassOf astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    astronomy:Star, astronomy:StellarObject, rdfs:Resource;
+  owl:sameAs astronomy:SuperGiantStar .
+
+astronomy:SupermassiveBlackHole a owl:Class, owl:Thing;
+  rdfs:label "SupermassiveBlackHole";
+  rdfs:subClassOf astronomy:AstronomicalObject, astronomy:BlackHole, astronomy:CelestialBody,
+    astronomy:SpaceObject, astronomy:StellarObject, rdfs:Resource;
+  owl:sameAs astronomy:SupermassiveBlackHole .
+
+astronomy:Supernova a owl:Class, owl:Thing;
+  rdfs:label "Supernova";
+  rdfs:subClassOf astronomy:AstronomicalPhenomenon, rdfs:Resource;
+  owl:sameAs astronomy:Supernova .
+
+astronomy:TON618 a astronomy:SupermassiveBlackHole;
+  astronomy:discoveredBy "John Bahcall and Martin Schmidt";
+  astronomy:discoveredDate "1963-05-15"^^xsd:date;
+  astronomy:hasDiameter "390000000";
+  astronomy:hasMass "66 quintillion quintillion metric tons";
+  astronomy:hasTemperature "50000";
+  rdfs:label "TON618" .
+
+astronomy:Telescope a owl:Class, owl:Thing;
+  rdfs:label "Telescope";
+  rdfs:subClassOf astronomy:SpaceArtifact, astronomy:SpaceObject, rdfs:Resource;
+  owl:sameAs astronomy:Telescope .
+
+astronomy:Tempel1 a astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Comet,
+    astronomy:PlanetaryObject, astronomy:ShortPeriodComet, astronomy:SpaceObject, rdfs:Resource,
+    owl:Thing;
+  astronomy:discoveredBy "Heinrich Wilhelm Olbers";
+  astronomy:discoveredDate "1867-04-03"^^xsd:date;
+  astronomy:hasDiameter "7.6";
+  astronomy:hasLife false;
+  astronomy:hasMass "4.7 trillion metric tons";
+  astronomy:hasOrbitalPeriod "2,007.5";
+  astronomy:hasPhysicalProperty "-100", "4.7 trillion metric tons", "7.6";
+  astronomy:hasTemperature "-100";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:orbitsAround astronomy:Sun;
+  astronomy:orbitsAroundStar astronomy:Sun;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:passedNear astronomy:Jupiter;
+  astronomy:relatedTo astronomy:HubbleSpaceTelescope, astronomy:MilkyWay, astronomy:Sun;
+  astronomy:visibleFrom astronomy:Earth;
+  astronomy:visitedBy astronomy:DeepImpact;
+  rdfs:label "Tempel1";
+  owl:sameAs astronomy:Tempel1 .
+
+astronomy:Titan a astronomy:Moon;
+  astronomy:discoveredBy "Christiaan Huygens";
+  astronomy:discoveredDate "1655-03-25"^^xsd:date;
+  astronomy:hasDiameter "5151.8";
+  astronomy:hasGravity "1.352";
+  astronomy:hasLife true;
+  astronomy:hasMass "134.5 quintillion metric tons";
+  astronomy:hasOrbitalPeriod "16";
+  astronomy:hasTemperature "-179.0";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:influences astronomy:Saturn;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:orbitsAroundPlanet astronomy:Saturn;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:visibleFrom astronomy:Earth;
+  astronomy:visitedBy astronomy:Cassini-Huygens_Mission;
+  rdfs:label "Titan" .
+
+astronomy:Triton a astronomy:Moon;
+  astronomy:discoveredBy "William Lassell";
+  astronomy:discoveredDate "1846-10-10"^^xsd:date;
+  astronomy:hasDiameter "2706.8";
+  astronomy:hasGravity "0.779";
+  astronomy:hasLife false;
+  astronomy:hasMass "21,400,000 trillion kilograms";
+  astronomy:hasOrbitalPeriod "5.87685";
+  astronomy:hasTemperature "-235.0";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:influences astronomy:Neptune;
+  astronomy:observedBySpacecraft astronomy:Voyager2;
+  astronomy:orbitsAroundPlanet astronomy:Neptune;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:visibleFrom astronomy:Earth;
+  astronomy:visitedBy astronomy:Voyager2;
+  rdfs:label "Triton" .
+
+astronomy:Tycho a astronomy:Supernova;
+  astronomy:hasBrightness -4.0;
+  astronomy:hasDuration "691200"^^xsd:int;
+  astronomy:observedFrom astronomy:Earth;
+  astronomy:visibleToNakedEye true;
+  astronomy:wasObservedOn "1572-11-11"^^xsd:date;
+  rdfs:label "Tycho" .
+
+astronomy:UnmannedSpacecraft a owl:Class, owl:Thing;
+  rdfs:label "UnmannedSpacecraft";
+  rdfs:subClassOf astronomy:SpaceArtifact, astronomy:SpaceObject, astronomy:Spacecraft,
+    rdfs:Resource;
+  owl:sameAs astronomy:UnmannedSpacecraft .
+
+astronomy:Uranus a astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Planet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource, owl:Thing;
+  astronomy:discoveredBy "William Herschel";
+  astronomy:discoveredDate "1781-03-13"^^xsd:date;
+  astronomy:hasColor "blue-green";
+  astronomy:hasDiameter "50724";
+  astronomy:hasLife false;
+  astronomy:hasMass "86,810,000,000,000 quadrillion metric tons";
+  astronomy:hasOrbitalPeriod "3660";
+  astronomy:hasPhysicalProperty "-224", "50724", "86,810,000,000,000 quadrillion metric tons",
+    "blue-green";
+  astronomy:hasSatellite astronomy:Miranda;
+  astronomy:hasTemperature "-224";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:orbitsAround astronomy:Sun;
+  astronomy:orbitsAroundStar astronomy:Sun;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:relatedTo astronomy:HubbleSpaceTelescope, astronomy:MilkyWay, astronomy:Sun;
+  astronomy:visibleFrom astronomy:Earth;
+  astronomy:visitedBy astronomy:Voyager2;
+  rdfs:label "Uranus";
+  owl:sameAs astronomy:Uranus .
+
+astronomy:V404Cygni a astronomy:AstronomicalObject, astronomy:BlackHole, astronomy:CelestialBody,
+    astronomy:SpaceObject, astronomy:StellarBlackHole, astronomy:StellarObject, rdfs:Resource,
+    owl:Thing;
+  astronomy:discoveredBy "Bruce Margon";
+  astronomy:discoveredDate "1989-06-04"^^xsd:date;
+  astronomy:hasDiameter "32.7";
+  astronomy:hasMass "23.9 quadrillion metric tons";
+  astronomy:hasPhysicalProperty "10000000", "23.9 quadrillion metric tons", "32.7";
+  astronomy:hasSpin 0.95;
+  astronomy:hasTemperature "10000000";
+  astronomy:observedBy astronomy:HubbleSpaceTelescope;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:relatedTo astronomy:HubbleSpaceTelescope, astronomy:MilkyWay;
+  rdfs:label "V404Cygni";
+  owl:sameAs astronomy:V404Cygni .
+
+astronomy:Vega a astronomy:BlueGiantStar;
+  astronomy:discoveredBy "Ancient Astronomers";
+  astronomy:hasDiameter "3000000";
+  astronomy:hasGravity "13900";
+  astronomy:hasMass "4.8 quintillion metric tons";
+  astronomy:hasTemperature "9600";
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:spectralType "A0_Va";
+  rdfs:label "Vega" .
+
+astronomy:Venus a astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Planet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource, owl:Thing;
+  astronomy:discoveredBy "Unknown";
+  astronomy:hasArtificialSatellite astronomy:Akatsuki;
+  astronomy:hasColor "yellow";
+  astronomy:hasDiameter "12104";
+  astronomy:hasGravity "8.87";
+  astronomy:hasLife false;
+  astronomy:hasMass "4,867,000,000,000 metric tons";
+  astronomy:hasOrbitalPeriod "225";
+  astronomy:hasPhysicalProperty "12104", "4,867,000,000,000 metric tons", "465", "8.87",
+    "yellow";
+  astronomy:hasTemperature "465";
+  astronomy:illuminatedBy astronomy:Sun;
+  astronomy:influences astronomy:Earth;
+  astronomy:orbitsAround astronomy:Sun;
+  astronomy:orbitsAroundStar astronomy:Sun;
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:relatedTo astronomy:Earth, astronomy:MilkyWay, astronomy:Sun;
+  astronomy:visibleFrom astronomy:Earth;
+  astronomy:visitedBy astronomy:MagellanSpacecraft;
+  rdfs:label "Venus";
+  owl:sameAs astronomy:Venus .
+
+astronomy:Viking a astronomy:UnmannedSpacecraft;
+  astronomy:hasActiveStatus false;
+  astronomy:hasOperator "NASA";
+  astronomy:launchDate "1975-08-20"^^xsd:date;
+  rdfs:label "Viking" .
+
+astronomy:Voyager2 a astronomy:SpaceArtifact, astronomy:SpaceObject, astronomy:Spacecraft,
+    astronomy:UnmannedSpacecraft, rdfs:Resource, owl:Thing;
+  astronomy:hasActiveStatus true;
+  astronomy:hasOperator "NASA";
+  astronomy:launchDate "1977-08-20"^^xsd:date;
+  rdfs:label "Voyager2";
+  owl:sameAs astronomy:Voyager2 .
+
+astronomy:VoyagerProbes a astronomy:UnmannedSpacecraft;
+  astronomy:hasActiveStatus true;
+  astronomy:hasOperator "NASA";
+  astronomy:launchDate "1977-09-05"^^xsd:date;
+  rdfs:label "VoyagerProbes" .
+
+astronomy:WeatherSatellite a owl:Class, owl:Thing;
+  rdfs:label "WeatherSatellite";
+  rdfs:subClassOf astronomy:ArtificialSatellite, astronomy:SpaceArtifact, astronomy:SpaceObject,
+    rdfs:Resource;
+  owl:sameAs astronomy:WeatherSatellite .
+
+astronomy:ZetaOrionis a astronomy:BlueGiantStar;
+  astronomy:discoveredBy "Johann Bayer";
+  astronomy:hasDiameter "32000000";
+  astronomy:hasGravity "2500";
+  astronomy:hasMass "58 quintillion metric tons";
+  astronomy:hasTemperature "29000";
+  astronomy:partOfGalaxy astronomy:MilkyWay;
+  astronomy:spectralType "O9.5Ib";
+  rdfs:label "ZetaOrionis" .
+
+astronomy:artificialSatelliteOf a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:ArtificialSatellite, astronomy:SpaceArtifact, astronomy:SpaceObject,
+    rdfs:Resource;
+  rdfs:label "artificialSatelliteOf";
+  rdfs:range astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Planet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource;
+  owl:sameAs astronomy:artificialSatelliteOf .
+
+astronomy:causedBy a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalPhenomenon, astronomy:Eclipse, rdfs:Resource;
+  rdfs:label "cuased by";
+  rdfs:range astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Moon,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource;
+  owl:sameAs astronomy:causedBy .
+
+astronomy:collidedWith a owl:ObjectProperty, owl:SymmetricProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    rdfs:Resource;
+  rdfs:label "collidedWith";
+  rdfs:range astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    rdfs:Resource;
+  rdfs:subPropertyOf astronomy:collidedWith;
+  owl:sameAs astronomy:collidedWith .
+
+astronomy:connectedTo a owl:ObjectProperty, owl:SymmetricProperty, owl:Thing;
+  rdfs:domain astronomy:ArtificialSatellite, astronomy:SpaceArtifact, astronomy:SpaceObject,
+    rdfs:Resource;
+  rdfs:label "is connected to";
+  rdfs:range astronomy:SpaceArtifact, astronomy:SpaceObject, astronomy:SpaceStation,
+    rdfs:Resource;
+  rdfs:subPropertyOf astronomy:relatedTo;
+  owl:sameAs astronomy:connectedTo .
+
+astronomy:discoveredBy a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:SpaceObject, rdfs:Resource;
+  rdfs:label "DiscoveredBy";
+  rdfs:range rdfs:Literal, xsd:string;
+  rdfs:subPropertyOf astronomy:discoveredBy;
+  owl:sameAs astronomy:discoveredBy .
+
+astronomy:discoveredDate a owl:DatatypeProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:SpaceObject, rdfs:Resource;
+  rdfs:label "DiscoveredDate";
+  rdfs:range xsd:date;
+  rdfs:subPropertyOf astronomy:discoveredDate;
+  owl:sameAs astronomy:discoveredDate .
+
+astronomy:dockedAt a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:MannedSpacecraft, astronomy:SpaceArtifact, astronomy:SpaceObject,
+    astronomy:Spacecraft, rdfs:Resource;
+  rdfs:label "docked at";
+  rdfs:range astronomy:SpaceArtifact, astronomy:SpaceObject, astronomy:SpaceStation,
+    rdfs:Resource;
+  rdfs:subPropertyOf astronomy:dockedAt;
+  owl:sameAs astronomy:dockedAt .
+
+astronomy:hasActiveStatus a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:SpaceArtifact, astronomy:SpaceObject, rdfs:Resource;
+  rdfs:label "ActiveStatus";
+  rdfs:range rdfs:Literal, xsd:boolean;
+  rdfs:subPropertyOf astronomy:hasActiveStatus;
+  owl:sameAs astronomy:hasActiveStatus .
+
+astronomy:hasAltitudeFromEarth a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:SpaceArtifact, astronomy:SpaceObject, astronomy:SpaceStation,
+    rdfs:Resource;
+  rdfs:label "altitude from earth";
+  rdfs:range rdfs:Literal, xsd:decimal;
+  rdfs:subPropertyOf astronomy:hasAltitudeFromEarth;
+  owl:sameAs astronomy:hasAltitudeFromEarth .
+
+astronomy:hasArtificialSatellite a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Planet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource;
+  rdfs:label "hasArtificialSatellite";
+  rdfs:range astronomy:ArtificialSatellite, astronomy:SpaceArtifact, astronomy:SpaceObject,
+    rdfs:Resource;
+  rdfs:subPropertyOf astronomy:hasArtificialSatellite;
+  owl:inverseOf astronomy:artificialSatelliteOf;
+  owl:sameAs astronomy:hasArtificialSatellite .
+
+astronomy:hasBrightness a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalPhenomenon, astronomy:Supernova, rdfs:Resource;
+  rdfs:label "Brightness";
+  rdfs:range rdfs:Literal, xsd:decimal;
+  owl:sameAs astronomy:hasBrightness .
+
+astronomy:hasColor a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Planet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource;
+  rdfs:label "has color";
+  rdfs:range rdfs:Literal, xsd:string;
+  rdfs:subPropertyOf astronomy:hasColor, astronomy:hasPhysicalProperty;
+  owl:sameAs astronomy:hasColor .
+
+astronomy:hasCrewCapacity a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:MannedSpacecraft, astronomy:SpaceArtifact, astronomy:SpaceObject,
+    astronomy:Spacecraft, rdfs:Resource;
+  rdfs:label "CrewCapacity";
+  rdfs:range rdfs:Literal, xsd:integer;
+  rdfs:subPropertyOf astronomy:hasCrewCapacity;
+  owl:sameAs astronomy:hasCrewCapacity .
+
+astronomy:hasDiameter a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    rdfs:Resource;
+  rdfs:label "Diameter";
+  rdfs:range rdfs:Literal, xsd:string;
+  rdfs:subPropertyOf astronomy:hasDiameter, astronomy:hasPhysicalProperty;
+  owl:sameAs astronomy:hasDiameter .
+
+astronomy:hasDuration a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalPhenomenon, rdfs:Resource;
+  rdfs:label "Duration";
+  rdfs:range rdfs:Literal, xsd:integer;
+  rdfs:subPropertyOf astronomy:hasDuration;
+  owl:sameAs astronomy:hasDuration .
+
+astronomy:hasFocalLength a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:SpaceArtifact, astronomy:SpaceObject, astronomy:Telescope, rdfs:Resource;
+  rdfs:label "FocalLength";
+  rdfs:range rdfs:Literal, xsd:decimal;
+  rdfs:subPropertyOf astronomy:hasFocalLength;
+  owl:sameAs astronomy:hasFocalLength .
+
+astronomy:hasGalacticCenter a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:Galaxy, astronomy:SpaceObject,
+    rdfs:Resource;
+  rdfs:label "hasGalacticCenter";
+  rdfs:range astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    astronomy:StellarObject, rdfs:Resource;
+  owl:sameAs astronomy:hasGalacticCenter .
+
+astronomy:hasGravity a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    rdfs:Resource;
+  rdfs:label "Gravity";
+  rdfs:range rdfs:Literal, xsd:string;
+  rdfs:subPropertyOf astronomy:hasGravity, astronomy:hasPhysicalProperty;
+  owl:sameAs astronomy:hasGravity .
+
+astronomy:hasLife a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:PlanetaryObject,
+    astronomy:SpaceObject, rdfs:Resource;
+  rdfs:label "Has Life";
+  rdfs:range rdfs:Literal, xsd:boolean;
+  rdfs:subPropertyOf astronomy:hasLife;
+  owl:sameAs astronomy:hasLife .
+
+astronomy:hasMass a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    rdfs:Resource;
+  rdfs:label "Mass";
+  rdfs:range rdfs:Literal, xsd:string;
+  rdfs:subPropertyOf astronomy:hasMass, astronomy:hasPhysicalProperty;
+  owl:sameAs astronomy:hasMass .
+
+astronomy:hasMaxCoverage a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalPhenomenon, astronomy:Eclipse, rdfs:Resource;
+  rdfs:label "Has maximum coverage";
+  rdfs:range rdfs:Literal, xsd:decimal;
+  rdfs:subPropertyOf astronomy:hasMaxCoverage;
+  owl:sameAs astronomy:hasMaxCoverage .
+
+astronomy:hasOperator a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:SpaceArtifact, astronomy:SpaceObject, rdfs:Resource;
+  rdfs:label "hasOperator";
+  rdfs:range rdfs:Literal, xsd:string;
+  rdfs:subPropertyOf astronomy:hasOperator;
+  owl:sameAs astronomy:hasOperator .
+
+astronomy:hasOrbitType a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:ArtificialSatellite, astronomy:SpaceArtifact, astronomy:SpaceObject,
+    rdfs:Resource;
+  rdfs:label "orbitType";
+  rdfs:range rdfs:Literal, xsd:string;
+  rdfs:subPropertyOf astronomy:hasOrbitType;
+  owl:sameAs astronomy:hasOrbitType .
+
+astronomy:hasOrbitalPeriod a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:PlanetaryObject,
+    astronomy:SpaceObject, rdfs:Resource;
+  rdfs:label "orbitalPeriod";
+  rdfs:range rdfs:Literal, xsd:string;
+  rdfs:subPropertyOf astronomy:hasOrbitalPeriod;
+  owl:sameAs astronomy:hasOrbitalPeriod .
+
+astronomy:hasOrbitalSpeed a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:SpaceArtifact, astronomy:SpaceObject, astronomy:SpaceStation,
+    rdfs:Resource;
+  rdfs:label "orbitalSpeed";
+  rdfs:range rdfs:Literal, xsd:decimal;
+  rdfs:subPropertyOf astronomy:hasOrbitalSpeed;
+  owl:sameAs astronomy:hasOrbitalSpeed .
+
+astronomy:hasPhysicalProperty a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    rdfs:Resource;
+  rdfs:label "PhysicalProperty";
+  rdfs:range rdfs:Literal, xsd:string;
+  rdfs:subPropertyOf astronomy:hasPhysicalProperty;
+  owl:sameAs astronomy:hasPhysicalProperty .
+
+astronomy:hasSatellite a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Planet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource;
+  rdfs:label "hasSatellite";
+  rdfs:range astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Moon,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource;
+  owl:sameAs astronomy:hasSatellite .
+
+astronomy:hasSpin a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:BlackHole, astronomy:CelestialBody,
+    astronomy:SpaceObject, astronomy:StellarObject, rdfs:Resource;
+  rdfs:label "Spin";
+  rdfs:range rdfs:Literal, xsd:decimal;
+  rdfs:subPropertyOf astronomy:hasSpin;
+  owl:sameAs astronomy:hasSpin .
+
+astronomy:hasTemperature a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    rdfs:Resource;
+  rdfs:label "Temperature";
+  rdfs:range rdfs:Literal, xsd:string;
+  rdfs:subPropertyOf astronomy:hasPhysicalProperty, astronomy:hasTemperature;
+  owl:sameAs astronomy:hasTemperature .
+
+astronomy:illuminatedBy a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:PlanetaryObject,
+    astronomy:SpaceObject, rdfs:Resource;
+  rdfs:label "illuminatedBy";
+  rdfs:range astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    astronomy:Star, astronomy:StellarObject, rdfs:Resource;
+  rdfs:subPropertyOf astronomy:illuminatedBy;
+  owl:inverseOf astronomy:illuminates;
+  owl:sameAs astronomy:illuminatedBy .
+
+astronomy:illuminates a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    astronomy:Star, astronomy:StellarObject, rdfs:Resource;
+  rdfs:label "illuminates";
+  rdfs:range astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:PlanetaryObject,
+    astronomy:SpaceObject, rdfs:Resource;
+  owl:sameAs astronomy:illuminates .
+
+astronomy:influences a owl:ObjectProperty, owl:Thing, owl:TransitiveProperty;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    rdfs:Resource;
+  rdfs:label "influences";
+  rdfs:range astronomy:AstronomicalObject, astronomy:SpaceObject, rdfs:Resource;
+  rdfs:subPropertyOf astronomy:influences, astronomy:relatedTo;
+  owl:sameAs astronomy:influences .
+
+astronomy:interactsWith a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:ArtificialSatellite, astronomy:SpaceArtifact, astronomy:SpaceObject,
+    rdfs:Resource;
+  rdfs:label "interactsWith";
+  rdfs:range astronomy:SpaceArtifact, astronomy:SpaceObject, astronomy:SpaceStation,
+    rdfs:Resource;
+  rdfs:subPropertyOf astronomy:interactsWith;
+  owl:sameAs astronomy:interactsWith .
+
+astronomy:launchDate a owl:DatatypeProperty, owl:Thing;
+  rdfs:domain astronomy:SpaceArtifact, astronomy:SpaceObject, rdfs:Resource;
+  rdfs:label "launchDate";
+  rdfs:range xsd:date;
+  rdfs:subPropertyOf astronomy:launchDate;
+  owl:sameAs astronomy:launchDate .
+
+astronomy:launchedBy a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:ArtificialSatellite, astronomy:SpaceArtifact, astronomy:SpaceObject,
+    rdfs:Resource;
+  rdfs:label "launchedBy";
+  rdfs:range astronomy:SpaceArtifact, astronomy:SpaceObject, astronomy:Spacecraft, rdfs:Resource;
+  rdfs:subPropertyOf astronomy:launchedBy;
+  owl:sameAs astronomy:launchedBy .
+
+astronomy:monitors a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:ArtificialSatellite, astronomy:SpaceArtifact, astronomy:SpaceObject,
+    astronomy:WeatherSatellite, rdfs:Resource;
+  rdfs:label "monitors";
+  rdfs:range astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:PlanetaryObject,
+    astronomy:SpaceObject, rdfs:Resource;
+  rdfs:subPropertyOf astronomy:monitors;
+  owl:sameAs astronomy:monitors .
+
+astronomy:observedBy a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:SpaceObject, rdfs:Resource;
+  rdfs:label "Is observed by";
+  rdfs:subPropertyOf astronomy:observedBy, astronomy:relatedTo;
+  owl:sameAs astronomy:observedBy .
+
+astronomy:observedBySpacecraft a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:SpaceObject, rdfs:Resource;
+  rdfs:range astronomy:SpaceArtifact, astronomy:SpaceObject, astronomy:Spacecraft, rdfs:Resource;
+  rdfs:subPropertyOf astronomy:observedBy, astronomy:relatedTo;
+  owl:sameAs astronomy:observedBySpacecraft .
+
+astronomy:observedByTelescope a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:SpaceObject, rdfs:Resource;
+  rdfs:range astronomy:SpaceArtifact, astronomy:SpaceObject, astronomy:Telescope, rdfs:Resource;
+  rdfs:subPropertyOf astronomy:observedBy, astronomy:observedByTelescope, astronomy:relatedTo;
+  owl:sameAs astronomy:observedByTelescope .
+
+astronomy:observedFrom a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalPhenomenon, rdfs:Resource;
+  rdfs:label "observedFrom";
+  rdfs:range astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Planet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource;
+  rdfs:subPropertyOf astronomy:observedFrom;
+  owl:sameAs astronomy:observedFrom .
+
+astronomy:orbitsAround a owl:ObjectProperty, owl:Thing, owl:TransitiveProperty;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:PlanetaryObject,
+    astronomy:SpaceObject, rdfs:Resource;
+  rdfs:label "orbits around";
+  rdfs:subPropertyOf astronomy:orbitsAround, astronomy:relatedTo;
+  owl:sameAs astronomy:orbitsAround .
+
+astronomy:orbitsAroundPlanet a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:PlanetaryObject,
+    astronomy:SpaceObject, rdfs:Resource;
+  rdfs:range astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Planet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource;
+  rdfs:subPropertyOf astronomy:orbitsAround, astronomy:relatedTo;
+  owl:sameAs astronomy:orbitsAroundPlanet .
+
+astronomy:orbitsAroundStar a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:PlanetaryObject,
+    astronomy:SpaceObject, rdfs:Resource;
+  rdfs:range astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    astronomy:Star, astronomy:StellarObject, rdfs:Resource;
+  rdfs:subPropertyOf astronomy:orbitsAround, astronomy:orbitsAroundStar, astronomy:relatedTo;
+  owl:sameAs astronomy:orbitsAroundStar .
+
+astronomy:partOfGalaxy a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    rdfs:Resource;
+  rdfs:label "is part of galaxy";
+  rdfs:range astronomy:AstronomicalObject, astronomy:Galaxy, astronomy:SpaceObject,
+    rdfs:Resource;
+  rdfs:subPropertyOf astronomy:partOfGalaxy, astronomy:relatedTo;
+  owl:sameAs astronomy:partOfGalaxy .
+
+astronomy:passedNear a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Comet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource;
+  rdfs:label "passed near";
+  rdfs:range astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Planet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource;
+  rdfs:subPropertyOf astronomy:passedNear;
+  owl:sameAs astronomy:passedNear .
+
+astronomy:providesServiceTo a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:ArtificialSatellite, astronomy:NavigationSatellite, astronomy:SpaceArtifact,
+    astronomy:SpaceObject, rdfs:Resource;
+  rdfs:label "providesServiceTo";
+  rdfs:range astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Planet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource;
+  rdfs:subPropertyOf astronomy:providesServiceTo;
+  owl:sameAs astronomy:providesServiceTo .
+
+astronomy:relatedTo a owl:ObjectProperty, owl:Thing;
+  rdfs:label "Is related to";
+  rdfs:subPropertyOf astronomy:relatedTo;
+  owl:sameAs astronomy:relatedTo .
+
+astronomy:resultOf a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:BlackHole, astronomy:CelestialBody,
+    astronomy:SpaceObject, astronomy:StellarObject, rdfs:Resource;
+  rdfs:label "resultOf";
+  rdfs:range astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    astronomy:Star, astronomy:StellarObject, rdfs:Resource;
+  owl:sameAs astronomy:resultOf .
+
+astronomy:spectralType a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    astronomy:Star, astronomy:StellarObject, rdfs:Resource;
+  rdfs:label "spectralType";
+  rdfs:range rdfs:Literal, xsd:string;
+  rdfs:subPropertyOf astronomy:spectralType;
+  owl:sameAs astronomy:spectralType .
+
+astronomy:surroundedBy a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    astronomy:StellarObject, rdfs:Resource;
+  rdfs:label "surroundedBy";
+  rdfs:range astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:SpaceObject,
+    rdfs:Resource;
+  rdfs:subPropertyOf astronomy:surroundedBy;
+  owl:sameAs astronomy:surroundedBy .
+
+astronomy:theGreatAmerican a astronomy:AstronomicalPhenomenon, astronomy:Eclipse,
+    astronomy:SolarEclipse, rdfs:Resource, owl:Thing;
+  astronomy:causedBy astronomy:EarthMoon;
+  astronomy:hasDuration 210;
+  astronomy:hasMaxCoverage 100.0;
+  astronomy:observedFrom astronomy:Earth;
+  astronomy:visibleToNakedEye true;
+  astronomy:wasObservedOn "2017-08-21"^^xsd:date;
+  rdfs:label "Great American Eclipse";
+  owl:sameAs astronomy:theGreatAmerican .
+
+astronomy:theHarvestMoon a astronomy:AstronomicalPhenomenon, astronomy:Eclipse, astronomy:LunarEclipse,
+    rdfs:Resource, owl:Thing;
+  astronomy:causedBy astronomy:EarthMoon;
+  astronomy:hasDuration 180;
+  astronomy:hasMaxCoverage 80.0;
+  astronomy:observedFrom astronomy:Earth;
+  astronomy:visibleToNakedEye true;
+  astronomy:wasObservedOn "2022-09-07"^^xsd:date;
+  rdfs:label "The Harvest Moon";
+  owl:sameAs astronomy:theHarvestMoon .
+
+astronomy:theRingOfFire a astronomy:AstronomicalPhenomenon, astronomy:Eclipse, astronomy:SolarEclipse,
+    rdfs:Resource, owl:Thing;
+  astronomy:causedBy astronomy:EarthMoon;
+  astronomy:hasDuration 240;
+  astronomy:hasMaxCoverage 95.0;
+  astronomy:observedFrom astronomy:Earth;
+  astronomy:visibleToNakedEye true;
+  astronomy:wasObservedOn "2023-10-14"^^xsd:date;
+  rdfs:label "The Ring of Fire";
+  owl:sameAs astronomy:theRingOfFire .
+
+astronomy:theSnowMoon a astronomy:AstronomicalPhenomenon, astronomy:Eclipse, astronomy:LunarEclipse,
+    rdfs:Resource, owl:Thing;
+  astronomy:causedBy astronomy:EarthMoon;
+  astronomy:hasDuration 240;
+  astronomy:hasMaxCoverage 100.0;
+  astronomy:observedFrom astronomy:Earth;
+  astronomy:visibleToNakedEye true;
+  astronomy:wasObservedOn "2017-02-12"^^xsd:date;
+  rdfs:label "Snow Moon";
+  owl:sameAs astronomy:theSnowMoon .
+
+astronomy:visibleFrom a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:PlanetaryObject,
+    astronomy:SpaceObject, rdfs:Resource;
+  rdfs:label "is/was Visible From";
+  rdfs:range astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:Planet,
+    astronomy:PlanetaryObject, astronomy:SpaceObject, rdfs:Resource;
+  rdfs:subPropertyOf astronomy:visibleFrom;
+  owl:sameAs astronomy:visibleFrom .
+
+astronomy:visibleToNakedEye a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalPhenomenon, rdfs:Resource;
+  rdfs:label "VisibleToNakedEye";
+  rdfs:range rdfs:Literal, xsd:boolean;
+  rdfs:subPropertyOf astronomy:visibleToNakedEye;
+  owl:sameAs astronomy:visibleToNakedEye .
+
+astronomy:visitedBy a owl:ObjectProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalObject, astronomy:CelestialBody, astronomy:PlanetaryObject,
+    astronomy:SpaceObject, rdfs:Resource;
+  rdfs:label "visitedBy";
+  rdfs:range astronomy:SpaceArtifact, astronomy:SpaceObject, astronomy:Spacecraft, rdfs:Resource;
+  rdfs:subPropertyOf astronomy:visitedBy;
+  owl:sameAs astronomy:visitedBy .
+
+astronomy:wasObservedOn a owl:DatatypeProperty, owl:Thing;
+  rdfs:domain astronomy:AstronomicalPhenomenon, rdfs:Resource;
+  rdfs:label "was observed on";
+  rdfs:range xsd:date;
+  rdfs:subPropertyOf astronomy:wasObservedOn;
+  owl:sameAs astronomy:wasObservedOn .
+
+<http://spinrdf.org/spin#imports> a owl:ObjectProperty, owl:Thing;
+  rdfs:subPropertyOf <http://spinrdf.org/spin#imports>;
+  owl:sameAs <http://spinrdf.org/spin#imports> .
+
+<http://topbraid.org/spin/rdfsplus> a owl:Thing;
+  owl:sameAs <http://topbraid.org/spin/rdfsplus> .
+
+rdf:Alt a owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Container;
+  owl:sameAs rdf:Alt .
+
+rdf:Bag a owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Container;
+  owl:sameAs rdf:Bag .
+
+rdf:List a owl:Class, owl:Thing;
+  owl:sameAs rdf:List .
+
+rdf:ObjectProperty a owl:Thing;
+  owl:sameAs rdf:ObjectProperty .
+
+rdf:PlainLiteral a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs rdf:PlainLiteral .
+
+rdf:Property a owl:Class, owl:Thing;
+  owl:sameAs rdf:Property .
+
+rdf:Seq a owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Container;
+  owl:sameAs rdf:Seq .
+
+rdf:Statement a owl:Class, owl:Thing;
+  owl:sameAs rdf:Statement .
+
+rdf:XMLLiteral a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs rdf:XMLLiteral .
+
+rdf:_1 a rdfs:ContainerMembershipProperty, owl:ObjectProperty, owl:Thing;
+  owl:sameAs rdf:_1 .
+
+rdf:first a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdf:List;
+  owl:sameAs rdf:first .
+
+rdf:langRange a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:range rdfs:Literal;
+  rdfs:subPropertyOf rdf:langRange;
+  owl:equivalentProperty rdf:langRange;
+  owl:sameAs rdf:langRange .
+
+rdf:nil a rdf:List, owl:Thing;
+  owl:sameAs rdf:nil .
+
+rdf:object a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdf:Statement;
+  owl:sameAs rdf:object .
+
+rdf:predicate a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdf:Statement;
+  owl:sameAs rdf:predicate .
+
+rdf:rest a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdf:List;
+  rdfs:range rdf:List;
+  owl:sameAs rdf:rest .
+
+rdf:subject a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdf:Statement;
+  owl:sameAs rdf:subject .
+
+rdf:type a owl:ObjectProperty, owl:Thing;
+  rdfs:subPropertyOf rdf:type;
+  owl:sameAs rdf:type .
+
+rdf:value a owl:ObjectProperty, owl:Thing;
+  owl:sameAs rdf:value .
+
+rdfs:Class a owl:Class, owl:Thing;
+  owl:sameAs rdfs:Class .
+
+rdfs:Container a owl:Class, owl:Thing;
+  owl:sameAs rdfs:Container .
+
+rdfs:ContainerMembershipProperty a owl:Class, owl:Thing;
+  rdfs:subClassOf rdf:Property;
+  owl:sameAs rdfs:ContainerMembershipProperty .
+
+rdfs:Datatype a owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Class;
+  owl:sameAs rdfs:Datatype .
+
+rdfs:Literal a rdfs:Datatype, owl:Class, owl:Thing;
+  owl:sameAs rdfs:Literal .
+
+rdfs:Resource a owl:Class, owl:Thing;
+  owl:sameAs rdfs:Resource .
+
+rdfs:comment a owl:AnnotationProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:range rdfs:Literal;
+  owl:sameAs rdfs:comment .
+
+rdfs:domain a owl:ObjectProperty, owl:Thing;
+  rdfs:range rdfs:Class;
+  rdfs:subPropertyOf rdfs:domain;
+  owl:sameAs rdfs:domain .
+
+rdfs:isDefinedBy a owl:AnnotationProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:subPropertyOf rdfs:seeAlso;
+  owl:sameAs rdfs:isDefinedBy .
+
+rdfs:label a owl:AnnotationProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:range rdfs:Literal;
+  rdfs:subPropertyOf rdfs:label;
+  owl:sameAs rdfs:label .
+
+rdfs:range a owl:ObjectProperty, owl:Thing;
+  rdfs:range rdfs:Class;
+  rdfs:subPropertyOf rdfs:range;
+  owl:sameAs rdfs:range .
+
+rdfs:seeAlso a owl:AnnotationProperty, owl:ObjectProperty, owl:Thing;
+  owl:sameAs rdfs:seeAlso .
+
+rdfs:subClassOf a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class;
+  rdfs:range rdfs:Class;
+  rdfs:subPropertyOf rdfs:subClassOf;
+  owl:sameAs rdfs:subClassOf .
+
+rdfs:subPropertyOf a owl:ObjectProperty, owl:Thing;
+  rdfs:subPropertyOf rdfs:subPropertyOf;
+  owl:sameAs rdfs:subPropertyOf .
+
+xsd:NCName a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:NCName .
+
+xsd:NMTOKEN a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:NMTOKEN .
+
+xsd:Name a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:Name .
+
+xsd:anyURI a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:anyURI .
+
+xsd:base64Binary a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:base64Binary .
+
+xsd:boolean a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:boolean .
+
+xsd:byte a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:byte .
+
+xsd:date a owl:Class, owl:Thing;
+  owl:sameAs xsd:date .
+
+xsd:dateTime a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:dateTime .
+
+xsd:dateTimeStamp a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:dateTimeStamp .
+
+xsd:decimal a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:decimal .
+
+xsd:double a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:double .
+
+xsd:float a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:float .
+
+xsd:hexBinary a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:hexBinary .
+
+xsd:int a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:int .
+
+xsd:integer a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:integer .
+
+xsd:language a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:language .
+
+xsd:length a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:range rdfs:Literal;
+  rdfs:subPropertyOf xsd:length;
+  owl:equivalentProperty xsd:length;
+  owl:sameAs xsd:length .
+
+xsd:long a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:long .
+
+xsd:maxExclusive a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:range rdfs:Literal;
+  rdfs:subPropertyOf xsd:maxExclusive;
+  owl:equivalentProperty xsd:maxExclusive;
+  owl:sameAs xsd:maxExclusive .
+
+xsd:maxInclusive a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:range rdfs:Literal;
+  rdfs:subPropertyOf xsd:maxInclusive;
+  owl:equivalentProperty xsd:maxInclusive;
+  owl:sameAs xsd:maxInclusive .
+
+xsd:maxLength a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:range rdfs:Literal;
+  rdfs:subPropertyOf xsd:maxLength;
+  owl:equivalentProperty xsd:maxLength;
+  owl:sameAs xsd:maxLength .
+
+xsd:minExclusive a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:range rdfs:Literal;
+  rdfs:subPropertyOf xsd:minExclusive;
+  owl:equivalentProperty xsd:minExclusive;
+  owl:sameAs xsd:minExclusive .
+
+xsd:minInclusive a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:range rdfs:Literal;
+  rdfs:subPropertyOf xsd:minInclusive;
+  owl:equivalentProperty xsd:minInclusive;
+  owl:sameAs xsd:minInclusive .
+
+xsd:minLength a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:range rdfs:Literal;
+  rdfs:subPropertyOf xsd:minLength;
+  owl:equivalentProperty xsd:minLength;
+  owl:sameAs xsd:minLength .
+
+xsd:negativeInteger a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:negativeInteger .
+
+xsd:nonNegativeInteger a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:nonNegativeInteger .
+
+xsd:nonPositiveInteger a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:nonPositiveInteger .
+
+xsd:normalizedString a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:normalizedString .
+
+xsd:pattern a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:range rdfs:Literal;
+  rdfs:subPropertyOf xsd:pattern;
+  owl:equivalentProperty xsd:pattern;
+  owl:sameAs xsd:pattern .
+
+xsd:positiveInteger a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:positiveInteger .
+
+xsd:short a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:short .
+
+xsd:string a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:string .
+
+xsd:token a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:token .
+
+xsd:unsignedByte a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:unsignedByte .
+
+xsd:unsignedInt a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:unsignedInt .
+
+xsd:unsignedLong a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:unsignedLong .
+
+xsd:unsignedShort a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs xsd:unsignedShort .
+
+owl:AllDifferent a owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Resource;
+  owl:sameAs owl:AllDifferent .
+
+owl:AllDisjointClasses a owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Resource;
+  owl:sameAs owl:AllDisjointClasses .
+
+owl:AllDisjointProperties a owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Resource;
+  owl:sameAs owl:AllDisjointProperties .
+
+owl:Annotation a owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Resource;
+  owl:sameAs owl:Annotation .
+
+owl:AnnotationProperty a owl:Class, owl:Thing;
+  rdfs:subClassOf rdf:Property;
+  owl:sameAs owl:AnnotationProperty .
+
+owl:AsymmetricProperty a owl:Class, owl:Thing;
+  rdfs:subClassOf rdf:Property, owl:ObjectProperty;
+  owl:sameAs owl:AsymmetricProperty .
+
+owl:Axiom a owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Resource;
+  owl:sameAs owl:Axiom .
+
+owl:Class a owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Class;
+  owl:sameAs owl:Class .
+
+owl:DataRange a owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Class, rdfs:Datatype;
+  owl:sameAs owl:DataRange .
+
+owl:DatatypeProperty a owl:Class, owl:Thing;
+  rdfs:subClassOf rdf:Property;
+  owl:sameAs owl:DatatypeProperty .
+
+owl:DeprecatedClass a owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Class;
+  owl:sameAs owl:DeprecatedClass .
+
+owl:DeprecatedProperty a owl:Class, owl:Thing;
+  rdfs:subClassOf rdf:Property;
+  owl:sameAs owl:DeprecatedProperty .
+
+owl:FunctionalProperty a owl:Class, owl:Thing;
+  rdfs:subClassOf rdf:Property;
+  owl:sameAs owl:FunctionalProperty .
+
+owl:InverseFunctionalProperty a owl:Class, owl:Thing;
+  rdfs:subClassOf rdf:Property, owl:ObjectProperty;
+  owl:sameAs owl:InverseFunctionalProperty .
+
+owl:IrreflexiveProperty a owl:Class, owl:Thing;
+  rdfs:subClassOf rdf:Property, owl:ObjectProperty;
+  owl:sameAs owl:IrreflexiveProperty .
+
+owl:NamedIndividual a owl:Class, owl:Thing;
+  rdfs:subClassOf owl:Thing;
+  owl:sameAs owl:NamedIndividual .
+
+owl:NegativePropertyAssertion a owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Resource;
+  owl:sameAs owl:NegativePropertyAssertion .
+
+owl:Nothing a owl:Class, owl:Thing;
+  rdfs:subClassOf owl:Nothing, owl:Thing;
+  owl:equivalentClass owl:Nothing;
+  owl:sameAs owl:Nothing .
+
+owl:ObjectProperty a owl:Class, owl:Thing;
+  rdfs:subClassOf rdf:Property;
+  owl:sameAs owl:ObjectProperty .
+
+owl:Ontology a owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Resource;
+  owl:sameAs owl:Ontology .
+
+owl:OntologyProperty a owl:Class, owl:Thing;
+  rdfs:subClassOf rdf:Property;
+  owl:sameAs owl:OntologyProperty .
+
+owl:ReflexiveProperty a owl:Class, owl:Thing;
+  rdfs:subClassOf rdf:Property, owl:ObjectProperty;
+  owl:sameAs owl:ReflexiveProperty .
+
+owl:Restriction a owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Class, owl:Class;
+  owl:sameAs owl:Restriction .
+
+owl:SymmetricProperty a owl:Class, owl:Thing;
+  rdfs:subClassOf rdf:Property, owl:ObjectProperty;
+  owl:sameAs owl:SymmetricProperty .
+
+owl:Thing a owl:Class, owl:Thing;
+  rdfs:subClassOf owl:Thing;
+  owl:equivalentClass owl:Thing;
+  owl:sameAs owl:Thing .
+
+owl:TransitiveProperty a owl:Class, owl:Thing;
+  rdfs:subClassOf rdf:Property, owl:ObjectProperty;
+  owl:sameAs owl:TransitiveProperty .
+
+owl:allValuesFrom a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class, owl:Class, owl:Restriction;
+  rdfs:range rdfs:Class;
+  owl:sameAs owl:allValuesFrom .
+
+owl:annotatedProperty a owl:ObjectProperty, owl:Thing;
+  owl:sameAs owl:annotatedProperty .
+
+owl:annotatedSource a owl:ObjectProperty, owl:Thing;
+  owl:sameAs owl:annotatedSource .
+
+owl:annotatedTarget a owl:ObjectProperty, owl:Thing;
+  owl:sameAs owl:annotatedTarget .
+
+owl:assertionProperty a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Resource, owl:NegativePropertyAssertion;
+  owl:sameAs owl:assertionProperty .
+
+owl:backwardCompatibleWith a owl:AnnotationProperty, owl:ObjectProperty, owl:OntologyProperty,
+    owl:Thing;
+  rdfs:domain rdfs:Resource, owl:Ontology;
+  rdfs:range rdfs:Resource, owl:Ontology;
+  owl:sameAs owl:backwardCompatibleWith .
+
+owl:bottomDataProperty a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain owl:Thing;
+  rdfs:range rdfs:Literal;
+  rdfs:subPropertyOf owl:bottomDataProperty;
+  owl:equivalentProperty owl:bottomDataProperty;
+  owl:sameAs owl:bottomDataProperty .
+
+owl:bottomObjectProperty a owl:ObjectProperty, owl:Thing;
+  rdfs:domain owl:Thing;
+  rdfs:range owl:Thing;
+  rdfs:subPropertyOf owl:bottomObjectProperty;
+  owl:equivalentProperty owl:bottomObjectProperty;
+  owl:sameAs owl:bottomObjectProperty .
+
+owl:cardinality a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class, owl:Class, owl:Restriction;
+  rdfs:range rdfs:Literal, xsd:nonNegativeInteger;
+  owl:sameAs owl:cardinality .
+
+owl:complementOf a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class, owl:Class;
+  rdfs:range rdfs:Class, owl:Class;
+  owl:sameAs owl:complementOf .
+
+owl:datatypeComplementOf a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class, rdfs:Datatype;
+  rdfs:range rdfs:Class, rdfs:Datatype;
+  owl:sameAs owl:datatypeComplementOf .
+
+owl:deprecated a owl:AnnotationProperty, owl:ObjectProperty, owl:Thing;
+  owl:sameAs owl:deprecated .
+
+owl:differentFrom a owl:ObjectProperty, owl:Thing;
+  rdfs:domain owl:Thing;
+  rdfs:range owl:Thing;
+  owl:sameAs owl:differentFrom .
+
+owl:disjointUnionOf a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class, owl:Class;
+  rdfs:range rdf:List;
+  owl:sameAs owl:disjointUnionOf .
+
+owl:disjointWith a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class, owl:Class;
+  rdfs:range rdfs:Class, owl:Class;
+  owl:sameAs owl:disjointWith .
+
+owl:distinctMembers a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Resource, owl:AllDifferent;
+  rdfs:range rdf:List;
+  owl:sameAs owl:distinctMembers .
+
+owl:equivalentClass a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class;
+  rdfs:range rdfs:Class;
+  rdfs:subPropertyOf owl:equivalentClass;
+  owl:sameAs owl:equivalentClass .
+
+owl:equivalentProperty a owl:ObjectProperty, owl:Thing;
+  rdfs:subPropertyOf owl:equivalentProperty;
+  owl:sameAs owl:equivalentProperty .
+
+owl:hasKey a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class, owl:Class;
+  rdfs:range rdf:List;
+  owl:sameAs owl:hasKey .
+
+owl:hasSelf a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class, owl:Class, owl:Restriction;
+  owl:sameAs owl:hasSelf .
+
+owl:hasValue a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class, owl:Class, owl:Restriction;
+  owl:sameAs owl:hasValue .
+
+owl:imports a owl:ObjectProperty, owl:OntologyProperty, owl:Thing;
+  rdfs:domain rdfs:Resource, owl:Ontology;
+  rdfs:range rdfs:Resource, owl:Ontology;
+  owl:sameAs owl:imports .
+
+owl:incompatibleWith a owl:AnnotationProperty, owl:ObjectProperty, owl:OntologyProperty,
+    owl:Thing;
+  rdfs:domain rdfs:Resource, owl:Ontology;
+  rdfs:range rdfs:Resource, owl:Ontology;
+  owl:sameAs owl:incompatibleWith .
+
+owl:intersectionOf a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class;
+  rdfs:range rdf:List;
+  owl:sameAs owl:intersectionOf .
+
+owl:inverseOf a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdf:Property, owl:ObjectProperty;
+  rdfs:range rdf:Property, owl:ObjectProperty;
+  owl:sameAs owl:inverseOf .
+
+owl:maxCardinality a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class, owl:Class, owl:Restriction;
+  rdfs:range rdfs:Literal, xsd:nonNegativeInteger;
+  owl:sameAs owl:maxCardinality .
+
+owl:maxQualifiedCardinality a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class, owl:Class, owl:Restriction;
+  rdfs:range rdfs:Literal, xsd:nonNegativeInteger;
+  owl:sameAs owl:maxQualifiedCardinality .
+
+owl:members a owl:ObjectProperty, owl:Thing;
+  rdfs:range rdf:List;
+  owl:sameAs owl:members .
+
+owl:minCardinality a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class, owl:Class, owl:Restriction;
+  rdfs:range rdfs:Literal, xsd:nonNegativeInteger;
+  owl:sameAs owl:minCardinality .
+
+owl:minQualifiedCardinality a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class, owl:Class, owl:Restriction;
+  rdfs:range rdfs:Literal, xsd:nonNegativeInteger;
+  owl:sameAs owl:minQualifiedCardinality .
+
+owl:onClass a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class, owl:Class, owl:Restriction;
+  rdfs:range rdfs:Class, owl:Class;
+  owl:sameAs owl:onClass .
+
+owl:onDataRange a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class, owl:Class, owl:Restriction;
+  rdfs:range rdfs:Class, rdfs:Datatype;
+  owl:sameAs owl:onDataRange .
+
+owl:onDatatype a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class, rdfs:Datatype;
+  rdfs:range rdfs:Class, rdfs:Datatype;
+  owl:sameAs owl:onDatatype .
+
+owl:onProperties a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class, owl:Class, owl:Restriction;
+  rdfs:range rdf:List;
+  owl:sameAs owl:onProperties .
+
+owl:onProperty a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class, owl:Class, owl:Restriction;
+  owl:sameAs owl:onProperty .
+
+owl:oneOf a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class;
+  rdfs:range rdf:List;
+  owl:sameAs owl:oneOf .
+
+owl:priorVersion a owl:AnnotationProperty, owl:ObjectProperty, owl:OntologyProperty,
+    owl:Thing;
+  rdfs:domain rdfs:Resource, owl:Ontology;
+  rdfs:range rdfs:Resource, owl:Ontology;
+  owl:sameAs owl:priorVersion .
+
+owl:propertyChainAxiom a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdf:Property, owl:ObjectProperty;
+  rdfs:range rdf:List;
+  owl:sameAs owl:propertyChainAxiom .
+
+owl:propertyDisjointWith a owl:ObjectProperty, owl:Thing;
+  owl:sameAs owl:propertyDisjointWith .
+
+owl:qualifiedCardinality a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class, owl:Class, owl:Restriction;
+  rdfs:range rdfs:Literal, xsd:nonNegativeInteger;
+  owl:sameAs owl:qualifiedCardinality .
+
+owl:rational a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs owl:rational .
+
+owl:real a rdfs:Datatype, owl:Class, owl:Thing;
+  rdfs:subClassOf rdfs:Literal;
+  owl:sameAs owl:real .
+
+owl:sameAs a owl:ObjectProperty, owl:Thing;
+  rdfs:domain owl:Thing;
+  rdfs:range owl:Thing;
+  rdfs:subPropertyOf owl:sameAs;
+  owl:sameAs owl:sameAs .
+
+owl:someValuesFrom a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class, owl:Class, owl:Restriction;
+  rdfs:range rdfs:Class;
+  owl:sameAs owl:someValuesFrom .
+
+owl:sourceIndividual a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Resource, owl:NegativePropertyAssertion;
+  rdfs:range owl:Thing;
+  owl:sameAs owl:sourceIndividual .
+
+owl:targetIndividual a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Resource, owl:NegativePropertyAssertion;
+  rdfs:range owl:Thing;
+  owl:sameAs owl:targetIndividual .
+
+owl:targetValue a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Resource, owl:NegativePropertyAssertion;
+  rdfs:range rdfs:Literal;
+  owl:sameAs owl:targetValue .
+
+owl:topDataProperty a owl:DatatypeProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:domain owl:Thing;
+  rdfs:range rdfs:Literal;
+  rdfs:subPropertyOf owl:topDataProperty;
+  owl:equivalentProperty owl:topDataProperty;
+  owl:sameAs owl:topDataProperty .
+
+owl:topObjectProperty a rdf:ObjectProperty, owl:Thing;
+  rdfs:domain owl:Thing;
+  rdfs:range owl:Thing;
+  owl:sameAs owl:topObjectProperty .
+
+owl:unionOf a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class;
+  rdfs:range rdf:List;
+  owl:sameAs owl:unionOf .
+
+owl:versionIRI a owl:ObjectProperty, owl:OntologyProperty, owl:Thing;
+  rdfs:domain rdfs:Resource, owl:Ontology;
+  rdfs:range rdfs:Resource, owl:Ontology;
+  owl:sameAs owl:versionIRI .
+
+owl:versionInfo a owl:AnnotationProperty, owl:ObjectProperty, owl:Thing;
+  rdfs:subPropertyOf owl:versionInfo;
+  owl:sameAs owl:versionInfo .
+
+owl:withRestrictions a owl:ObjectProperty, owl:Thing;
+  rdfs:domain rdfs:Class, rdfs:Datatype;
+  rdfs:range rdf:List;
+  owl:sameAs owl:withRestrictions .

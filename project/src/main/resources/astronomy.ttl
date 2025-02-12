@@ -1,0 +1,1212 @@
+# baseURI: http://example.org/astronomy
+# prefix: astronomy
+
+@prefix astronomy: <http://example.org/astronomy#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/astronomy>
+  rdf:type owl:Ontology ;
+  <http://spinrdf.org/spin#imports> <http://topbraid.org/spin/rdfsplus> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+astronomy:Akatsuki
+  rdf:type astronomy:ArtificialSatellite ;
+  astronomy:hasActiveStatus "true"^^xsd:boolean ;
+  astronomy:hasOperator "Japan Aerospace Exploration Agency" ;
+  astronomy:hasOrbitType "Elliptical" ;
+  astronomy:launchDate "2010-05-20"^^xsd:date ;
+  rdfs:label "Akatsuki" ;
+.
+astronomy:AlphaTauri
+  rdf:type astronomy:RedGiantStar ;
+  astronomy:discoveredBy "Hipparchus" ;
+  astronomy:discoveredDate "0134-01-01"^^xsd:date ;
+  astronomy:hasDiameter "61000000" ;
+  astronomy:hasGravity "0.5" ;
+  astronomy:hasMass "680 sextillion metric tons" ;
+  astronomy:hasTemperature "3900" ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  astronomy:spectralType "K5_III" ;
+  rdfs:label "AlphaTauri" ;
+.
+astronomy:Andromeda
+  rdf:type astronomy:Spiral ;
+  astronomy:discoveredBy "Abd al-Rahman al-Sufi" ;
+  astronomy:discoveredDate "0964-01-01"^^xsd:date ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  rdfs:label "Andromeda" ;
+.
+astronomy:Apollo
+  rdf:type astronomy:MannedSpacecraft ;
+  astronomy:dockedAt astronomy:Skylab ;
+  astronomy:hasActiveStatus "false"^^xsd:boolean ;
+  astronomy:hasCrewCapacity 3 ;
+  astronomy:hasOperator "NASA" ;
+  astronomy:launchDate "1969-07-16"^^xsd:date ;
+  rdfs:label "Apollo" ;
+.
+astronomy:ArtificialSatellite
+  rdf:type rdfs:Class ;
+  rdfs:label "ArtificialSatellite" ;
+  rdfs:subClassOf astronomy:SpaceArtifact ;
+.
+astronomy:AstronomicalObject
+  rdf:type rdfs:Class ;
+  rdfs:label "AstronomicalObject" ;
+  rdfs:subClassOf astronomy:SpaceObject ;
+.
+astronomy:AstronomicalPhenomenon
+  rdf:type rdfs:Class ;
+  rdfs:label "AstronomicalPhenomenon" ;
+  rdfs:subClassOf rdfs:Resource ;
+.
+astronomy:AtlasV401
+  rdf:type astronomy:UnmannedSpacecraft ;
+  astronomy:hasActiveStatus "true"^^xsd:boolean ;
+  astronomy:hasOperator "United Launch Alliance " ;
+  astronomy:launchDate "2002-08-21"^^xsd:date ;
+  rdfs:label "AtlasV401" ;
+.
+astronomy:Betelgeuse
+  rdf:type astronomy:RedSuperGiantStar ;
+  astronomy:discoveredBy "Johann Bayer" ;
+  astronomy:discoveredDate "1603-01-01"^^xsd:date ;
+  astronomy:hasDiameter "1400000000" ;
+  astronomy:hasGravity "0.00085" ;
+  astronomy:hasMass "6.6 sextillion metric tons" ;
+  astronomy:hasTemperature "3500" ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  astronomy:spectralType "M1_M2_Ia" ;
+  rdfs:label "Betelgeuse" ;
+.
+astronomy:BlackHole
+  rdf:type rdfs:Class ;
+  rdfs:label "BlackHole" ;
+  rdfs:subClassOf astronomy:StellarObject ;
+.
+astronomy:BlueGiantStar
+  rdf:type rdfs:Class ;
+  rdfs:label "BlueGiantStar" ;
+  rdfs:subClassOf astronomy:GiantStar ;
+.
+astronomy:BlueSuperGiantStar
+  rdf:type rdfs:Class ;
+  rdfs:label "BlueSuperGiantStar" ;
+  rdfs:subClassOf astronomy:SuperGiantStar ;
+.
+astronomy:Cassini-Huygens_Mission
+  rdf:type astronomy:UnmannedSpacecraft ;
+  astronomy:hasActiveStatus "false"^^xsd:boolean ;
+  astronomy:hasOperator "NASA, ESA and ASI" ;
+  astronomy:launchDate "1997-10-15"^^xsd:date ;
+  rdfs:label "Cassini-Huygens Mission" ;
+.
+astronomy:CelestialBody
+  rdf:type rdfs:Class ;
+  rdfs:label "CelestialBody" ;
+  rdfs:subClassOf astronomy:AstronomicalObject ;
+.
+astronomy:CentaurusA
+  rdf:type astronomy:Elliptical ;
+  astronomy:discoveredBy "James Dunlop" ;
+  astronomy:discoveredDate "1826-01-01"^^xsd:date ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  rdfs:label "CentaurusA" ;
+.
+astronomy:Comet
+  rdf:type rdfs:Class ;
+  rdfs:label "Comet" ;
+  rdfs:subClassOf astronomy:PlanetaryObject ;
+.
+astronomy:CommunicationSatellite
+  rdf:type rdfs:Class ;
+  rdfs:label "CommunicationSatellite" ;
+  rdfs:subClassOf astronomy:ArtificialSatellite ;
+.
+astronomy:CygnusX1
+  rdf:type astronomy:StellarBlackHole ;
+  astronomy:discoveredBy "Tom Bolton" ;
+  astronomy:discoveredDate "1964-08-15"^^xsd:date ;
+  astronomy:hasDiameter "44.6" ;
+  astronomy:hasMass "29.5 quadrillion metric tons" ;
+  astronomy:hasSpin 0.94 ;
+  astronomy:hasTemperature "10000000" ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  astronomy:surroundedBy astronomy:HDE226868 ;
+  rdfs:label "CygnusX1" ;
+.
+astronomy:DeltaII7925H
+  rdf:type astronomy:UnmannedSpacecraft ;
+  astronomy:hasActiveStatus "true"^^xsd:boolean ;
+  astronomy:hasOperator "United Launch Alliance" ;
+  astronomy:launchDate "1998-03-13"^^xsd:date ;
+  rdfs:label "DeltaII7925H" ;
+.
+astronomy:DwarfPlanet
+  rdf:type rdfs:Class ;
+  rdfs:label "DwarfPlanet" ;
+  rdfs:subClassOf astronomy:PlanetaryObject ;
+.
+astronomy:Earth
+  rdf:type astronomy:Planet ;
+  astronomy:discoveredBy "Unknown" ;
+  astronomy:hasArtificialSatellite astronomy:GPS ;
+  astronomy:hasArtificialSatellite astronomy:Goes ;
+  astronomy:hasArtificialSatellite astronomy:Iridium ;
+  astronomy:hasColor "blue,green and white" ;
+  astronomy:hasDiameter "120742" ;
+  astronomy:hasGravity "9.81" ;
+  astronomy:hasLife "true"^^xsd:boolean ;
+  astronomy:hasMass "5,972,000,000,000 metric tons" ;
+  astronomy:hasOrbitalPeriod "365.25" ;
+  astronomy:hasTemperature "15" ;
+  astronomy:illuminatedBy astronomy:Sun ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  astronomy:orbitsAroundStar astronomy:Sun ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  astronomy:visibleFrom astronomy:Mars ;
+  astronomy:visibleFrom astronomy:Venus ;
+  astronomy:visitedBy astronomy:Apollo ;
+  rdfs:label "Earth" ;
+.
+astronomy:Eclipse
+  rdf:type rdfs:Class ;
+  rdfs:label "Eclipse" ;
+  rdfs:subClassOf astronomy:AstronomicalPhenomenon ;
+.
+astronomy:Elliptical
+  rdf:type rdfs:Class ;
+  rdfs:label "Elliptical" ;
+  rdfs:subClassOf astronomy:Galaxy ;
+.
+astronomy:Eris
+  rdf:type astronomy:DwarfPlanet ;
+  astronomy:discoveredBy "Mike Brown, Chad Trujillo and David Rabinowitz" ;
+  astronomy:discoveredDate "2005-01-05"^^xsd:date ;
+  astronomy:hasDiameter "2326" ;
+  astronomy:hasGravity "0.082" ;
+  astronomy:hasLife "false"^^xsd:boolean ;
+  astronomy:hasMass "16.6 quintillion metric tons" ;
+  astronomy:hasOrbitalPeriod "557" ;
+  astronomy:hasTemperature "-217" ;
+  astronomy:illuminatedBy astronomy:Sun ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  astronomy:orbitsAroundStar astronomy:Sun ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  astronomy:visibleFrom astronomy:Earth ;
+  rdfs:label "Eris" ;
+.
+astronomy:EventHorizonTelescope
+  rdf:type astronomy:Telescope ;
+  astronomy:hasActiveStatus "true"^^xsd:boolean ;
+  astronomy:hasFocalLength "10"^^xsd:decimal ;
+  astronomy:hasOperator "Event Horizon Telescope Collaboration" ;
+  astronomy:launchDate "2019-04-10"^^xsd:date ;
+  rdfs:label "EventHorizonTelescope" ;
+.
+astronomy:GPS
+  rdf:type astronomy:NavigationSatellite ;
+  astronomy:hasActiveStatus "true"^^xsd:boolean ;
+  astronomy:hasOperator "United States SpaceForce" ;
+  astronomy:hasOrbitType "Medium Earth Orbit" ;
+  astronomy:interactsWith astronomy:InternationalSpaceStation ;
+  astronomy:launchDate "1978-02-22"^^xsd:date ;
+  astronomy:launchedBy astronomy:AtlasV401 ;
+  astronomy:launchedBy astronomy:DeltaII7925H ;
+  astronomy:providesServiceTo astronomy:Earth ;
+  rdfs:label "GPS" ;
+.
+astronomy:Galaxy
+  rdf:type rdfs:Class ;
+  rdfs:label "Galaxy" ;
+  rdfs:subClassOf astronomy:AstronomicalObject ;
+.
+astronomy:GalileoSpacecraft
+  rdf:type astronomy:UnmannedSpacecraft ;
+  astronomy:hasActiveStatus "false"^^xsd:boolean ;
+  astronomy:hasOperator "NASA and ESA" ;
+  astronomy:launchDate "1989-10-18"^^xsd:date ;
+  rdfs:label "Galileo" ;
+.
+astronomy:GiantStar
+  rdf:type rdfs:Class ;
+  rdfs:label "GiantStar" ;
+  rdfs:subClassOf astronomy:Star ;
+.
+astronomy:Goes
+  rdf:type astronomy:WeatherSatellite ;
+  astronomy:hasActiveStatus "true"^^xsd:boolean ;
+  astronomy:hasOperator "National Oceanic and Atmospheric Administration" ;
+  astronomy:hasOrbitType "Geostationary Orbit" ;
+  astronomy:launchDate "1975-10-16"^^xsd:date ;
+  astronomy:launchedBy astronomy:AtlasV401 ;
+  astronomy:launchedBy astronomy:DeltaII7925H ;
+  astronomy:monitors astronomy:Earth ;
+  rdfs:label "Goes" ;
+.
+astronomy:HDE226868
+  rdf:type astronomy:BlueSuperGiantStar ;
+  astronomy:discoveredBy "Uhuru X-ray Observatory Team" ;
+  astronomy:discoveredDate "1964-12-08"^^xsd:date ;
+  astronomy:hasDiameter "17500000" ;
+  astronomy:hasGravity "15.85" ;
+  astronomy:hasMass "42 trillion trillion kilograms" ;
+  astronomy:hasTemperature "3726.85" ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  astronomy:spectralType "O9.7" ;
+  rdfs:label "HDE226868" ;
+.
+astronomy:Hale_Bopp
+  rdf:type astronomy:LongPeriodComet ;
+  astronomy:discoveredBy "Alan Hale and Thomas Bopp" ;
+  astronomy:discoveredDate "1995-07-23"^^xsd:date ;
+  astronomy:hasDiameter "40" ;
+  astronomy:hasLife "false"^^xsd:boolean ;
+  astronomy:hasMass "42 trillion metric tons" ;
+  astronomy:hasOrbitalPeriod "925,545" ;
+  astronomy:hasTemperature "-100" ;
+  astronomy:illuminatedBy astronomy:Sun ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  astronomy:orbitsAroundStar astronomy:Sun ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  astronomy:passedNear astronomy:Jupiter ;
+  astronomy:visibleFrom astronomy:Earth ;
+  rdfs:label "Hale_Bopp" ;
+.
+astronomy:Halley
+  rdf:type astronomy:ShortPeriodComet ;
+  astronomy:discoveredBy "Edmond Halley" ;
+  astronomy:discoveredDate "1682-01-01"^^xsd:date ;
+  astronomy:hasDiameter "15" ;
+  astronomy:hasLife "false"^^xsd:boolean ;
+  astronomy:hasMass "22 trillion metric tons" ;
+  astronomy:hasOrbitalPeriod "27,740" ;
+  astronomy:hasTemperature "-150" ;
+  astronomy:illuminatedBy astronomy:Sun ;
+  astronomy:influences astronomy:Earth ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  astronomy:orbitsAroundStar astronomy:Sun ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  astronomy:passedNear astronomy:Jupiter ;
+  astronomy:visibleFrom astronomy:Earth ;
+  rdfs:label "Halley" ;
+.
+astronomy:Haumea
+  rdf:type astronomy:DwarfPlanet ;
+  astronomy:discoveredBy "Mike Brown, Chad Trujillo and David Rabinowitz" ;
+  astronomy:discoveredDate "2004-01-01"^^xsd:date ;
+  astronomy:hasDiameter "1632" ;
+  astronomy:hasGravity "0.044" ;
+  astronomy:hasLife "false"^^xsd:boolean ;
+  astronomy:hasMass "420 quintillion metric tons" ;
+  astronomy:hasOrbitalPeriod "285" ;
+  astronomy:hasTemperature "-241" ;
+  astronomy:illuminatedBy astronomy:Sun ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  astronomy:orbitsAroundStar astronomy:Sun ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  rdfs:label "Haumea" ;
+.
+astronomy:HubbleSpaceTelescope
+  rdf:type astronomy:Telescope ;
+  astronomy:hasActiveStatus "true"^^xsd:boolean ;
+  astronomy:hasFocalLength 57.6 ;
+  astronomy:hasOperator "NASA" ;
+  astronomy:launchDate "1990-04-24"^^xsd:date ;
+  rdfs:label "HubbleSpaceTelescope" ;
+.
+astronomy:InSight
+  rdf:type astronomy:ArtificialSatellite ;
+  astronomy:hasActiveStatus "true"^^xsd:boolean ;
+  astronomy:hasOperator "NASA" ;
+  astronomy:launchDate "2018-05-05"^^xsd:date ;
+  astronomy:launchedBy astronomy:AtlasV401 ;
+  rdfs:label "InSight" ;
+.
+astronomy:InternationalSpaceStation
+  rdf:type astronomy:SpaceStation ;
+  astronomy:hasActiveStatus "true"^^xsd:boolean ;
+  astronomy:hasAltitudeFromEarth "400"^^xsd:decimal ;
+  astronomy:hasOperator "NASA" ;
+  astronomy:hasOrbitalSpeed "28000"^^xsd:decimal ;
+  astronomy:launchDate "1998-11-20"^^xsd:date ;
+  rdfs:label "InternationalSpaceStation" ;
+.
+astronomy:Iridium
+  rdf:type astronomy:CommunicationSatellite ;
+  astronomy:hasActiveStatus "true"^^xsd:boolean ;
+  astronomy:hasOperator "Iridium Communications Inc." ;
+  astronomy:hasOrbitType "Low Earth Orbit" ;
+  astronomy:launchDate "1997-01-01"^^xsd:date ;
+  astronomy:launchedBy astronomy:DeltaII7925H ;
+  rdfs:label "Iridium" ;
+.
+astronomy:Jupiter
+  rdf:type astronomy:Planet ;
+  astronomy:collidedWith astronomy:Shoemaker-Levy_9 ;
+  astronomy:discoveredBy "Galileo Galilei" ;
+  astronomy:discoveredDate "1610-01-01"^^xsd:date ;
+  astronomy:hasColor "white,brown and red" ;
+  astronomy:hasDiameter "139820" ;
+  astronomy:hasGravity "24.79" ;
+  astronomy:hasLife "false"^^xsd:boolean ;
+  astronomy:hasMass "1,898,000,000,000,000 quadrillion metric tons" ;
+  astronomy:hasOrbitalPeriod "4321,6" ;
+  astronomy:hasTemperature "-108" ;
+  astronomy:illuminatedBy astronomy:Sun ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  astronomy:orbitsAroundStar astronomy:Sun ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  astronomy:visibleFrom astronomy:Earth ;
+  astronomy:visitedBy astronomy:GalileoSpacecraft ;
+  rdfs:label "Jupiter" ;
+.
+astronomy:LongPeriodComet
+  rdf:type rdfs:Class ;
+  rdfs:label "LongPeriodComet" ;
+  rdfs:subClassOf astronomy:Comet ;
+.
+astronomy:LunarEclipse
+  rdf:type rdfs:Class ;
+  rdfs:label "LunarEclipse" ;
+  rdfs:subClassOf astronomy:Eclipse ;
+.
+astronomy:LunarReconnaissanceOrbiter
+  rdf:type astronomy:Telescope ;
+  astronomy:hasActiveStatus "true"^^xsd:boolean ;
+  astronomy:hasFocalLength 0.8 ;
+  astronomy:hasOperator "NASA" ;
+  astronomy:launchDate "2009-06-18"^^xsd:date ;
+  rdfs:label "LunarReconnaissanceOrbiter" ;
+.
+astronomy:MESSENGER
+  rdf:type astronomy:ArtificialSatellite ;
+  astronomy:hasActiveStatus "false"^^xsd:boolean ;
+  astronomy:hasOperator "NASA" ;
+  astronomy:hasOrbitType "Elliptical" ;
+  astronomy:launchDate "2004-08-03"^^xsd:date ;
+  astronomy:launchedBy astronomy:DeltaII7925H ;
+  rdfs:label "MESSENGER" ;
+.
+astronomy:MainSequenceStar
+  rdf:type rdfs:Class ;
+  rdfs:label "MainSequenceStar" ;
+  rdfs:subClassOf astronomy:Star ;
+.
+astronomy:Makemake
+  rdf:type astronomy:DwarfPlanet ;
+  astronomy:discoveredBy "Mike Brown, Chad Trujillo and David Rabinowitz" ;
+  astronomy:discoveredDate "2005-03-31"^^xsd:date ;
+  astronomy:hasDiameter "1430" ;
+  astronomy:hasGravity "0.05" ;
+  astronomy:hasLife "false"^^xsd:boolean ;
+  astronomy:hasMass "3 quintillion metric tons" ;
+  astronomy:hasOrbitalPeriod "310" ;
+  astronomy:hasTemperature "-239" ;
+  astronomy:illuminatedBy astronomy:Sun ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  astronomy:orbitsAroundStar astronomy:Sun ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  rdfs:label "Makemake" ;
+.
+astronomy:MannedSpacecraft
+  rdf:type rdfs:Class ;
+  rdfs:label "MannedSpacecraft" ;
+  rdfs:subClassOf astronomy:Spacecraft ;
+.
+astronomy:Mariner9
+  rdf:type astronomy:UnmannedSpacecraft ;
+  astronomy:hasActiveStatus "false"^^xsd:boolean ;
+  astronomy:hasOperator "NASA" ;
+  astronomy:launchDate "1971-05-30"^^xsd:date ;
+  rdfs:label "Mariner9" ;
+.
+astronomy:Mars
+  rdf:type astronomy:Planet ;
+  astronomy:discoveredBy "Unknown" ;
+  astronomy:hasArtificialSatellite astronomy:InSight ;
+  astronomy:hasColor "red" ;
+  astronomy:hasDiameter "6779" ;
+  astronomy:hasGravity "3.71" ;
+  astronomy:hasLife "false"^^xsd:boolean ;
+  astronomy:hasMass "641,710,000,000 metric tons" ;
+  astronomy:hasOrbitalPeriod "687" ;
+  astronomy:hasTemperature "-63" ;
+  astronomy:illuminatedBy astronomy:Sun ;
+  astronomy:influences astronomy:Earth ;
+  astronomy:influences astronomy:Jupiter ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  astronomy:orbitsAroundStar astronomy:Sun ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  astronomy:visibleFrom astronomy:Earth ;
+  rdfs:label "Mars" ;
+.
+astronomy:MarsExpress
+  rdf:type astronomy:UnmannedSpacecraft ;
+  astronomy:hasActiveStatus "true"^^xsd:boolean ;
+  astronomy:hasOperator "ESA" ;
+  astronomy:launchDate "2003-06-02"^^xsd:date ;
+  rdfs:label "MarsExpress" ;
+.
+astronomy:MarsReconnaissanceOrbiter
+  rdf:type astronomy:Telescope ;
+  astronomy:hasActiveStatus "true"^^xsd:boolean ;
+  astronomy:hasFocalLength 6.1 ;
+  astronomy:hasOperator "NASA" ;
+  astronomy:launchDate "2005-08-12"^^xsd:date ;
+  rdfs:label "MarsReconnaissanceOrbiter" ;
+.
+astronomy:Mercury
+  rdf:type astronomy:Planet ;
+  astronomy:discoveredBy "Unknown" ;
+  astronomy:hasArtificialSatellite astronomy:MESSENGER ;
+  astronomy:hasColor "Grey" ;
+  astronomy:hasDiameter "4880" ;
+  astronomy:hasGravity "3.7" ;
+  astronomy:hasLife "false"^^xsd:boolean ;
+  astronomy:hasMass "330,110,000,000 metric tons" ;
+  astronomy:hasOrbitalPeriod "87.97" ;
+  astronomy:hasTemperature "427" ;
+  astronomy:illuminatedBy astronomy:Sun ;
+  astronomy:orbitsAroundStar astronomy:Sun ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  astronomy:visibleFrom astronomy:Earth ;
+  rdfs:label "Mercury" ;
+.
+astronomy:Messier87
+  rdf:type astronomy:Elliptical ;
+  astronomy:discoveredBy "Charles Messier" ;
+  astronomy:discoveredDate "1781-03-18"^^xsd:date ;
+  astronomy:observedByTelescope astronomy:EventHorizonTelescope ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  rdfs:label "Messier87" ;
+.
+astronomy:MilkyWay
+  rdf:type astronomy:Spiral ;
+  astronomy:discoveredBy "Galileo Galilei" ;
+  astronomy:discoveredDate "1610-01-01"^^xsd:date ;
+  astronomy:observedByTelescope astronomy:EventHorizonTelescope ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  rdfs:label "MilkyWay" ;
+.
+astronomy:Moon
+  rdf:type rdfs:Class ;
+  rdfs:label "Moon" ;
+  rdfs:subClassOf astronomy:PlanetaryObject ;
+.
+astronomy:NEOWISE
+  rdf:type astronomy:LongPeriodComet ;
+  astronomy:discoveredBy "Karen Meech" ;
+  astronomy:discoveredDate "2020-03-27"^^xsd:date ;
+  astronomy:hasDiameter "5" ;
+  astronomy:hasLife "false"^^xsd:boolean ;
+  astronomy:hasMass "37 trillion metric tons" ;
+  astronomy:hasOrbitalPeriod "2,471,590" ;
+  astronomy:hasTemperature "-110" ;
+  astronomy:illuminatedBy astronomy:Sun ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  astronomy:orbitsAroundStar astronomy:Sun ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  astronomy:passedNear astronomy:Earth ;
+  astronomy:visibleFrom astronomy:Earth ;
+  rdfs:label "NEOWISE" ;
+.
+astronomy:NavigationSatellite
+  rdf:type rdfs:Class ;
+  rdfs:label "NavigationSatellite" ;
+  rdfs:subClassOf astronomy:ArtificialSatellite ;
+.
+astronomy:Neptune
+  rdf:type astronomy:Planet ;
+  astronomy:discoveredBy "Johann Galle" ;
+  astronomy:discoveredDate "1846-09-23"^^xsd:date ;
+  astronomy:hasColor "blue" ;
+  astronomy:hasDiameter "49244" ;
+  astronomy:hasGravity "11.15" ;
+  astronomy:hasLife "false"^^xsd:boolean ;
+  astronomy:hasMass "102,400,000,000,000 quadrillion metric tons" ;
+  astronomy:hasOrbitalPeriod "60225" ;
+  astronomy:hasTemperature "-2.18" ;
+  astronomy:illuminatedBy astronomy:Sun ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  astronomy:orbitsAroundStar astronomy:Sun ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  astronomy:visibleFrom astronomy:Earth ;
+  astronomy:visitedBy astronomy:Voyager2 ;
+  rdfs:label "Neptume" ;
+.
+astronomy:Planet
+  rdf:type rdfs:Class ;
+  rdfs:label "Planet" ;
+  rdfs:subClassOf astronomy:PlanetaryObject ;
+.
+astronomy:PlanetaryObject
+  rdf:type rdfs:Class ;
+  rdfs:label "PlanetaryObject" ;
+  rdfs:subClassOf astronomy:CelestialBody ;
+.
+astronomy:Pluto
+  rdf:type astronomy:DwarfPlanet ;
+  astronomy:discoveredBy "Clyde Tombaugh" ;
+  astronomy:discoveredDate "1930-02-18"^^xsd:date ;
+  astronomy:hasDiameter "2377" ;
+  astronomy:hasGravity "0.62" ;
+  astronomy:hasLife "false"^^xsd:boolean ;
+  astronomy:hasMass "1.303 quintillion metric tons" ;
+  astronomy:hasOrbitalPeriod "248" ;
+  astronomy:hasTemperature "-229" ;
+  astronomy:illuminatedBy astronomy:Sun ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  astronomy:orbitsAroundStar astronomy:Sun ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  rdfs:label "Pluto" ;
+.
+astronomy:ProximaCentauri
+  rdf:type astronomy:MainSequenceStar ;
+  astronomy:discoveredBy "Robert T.A. Innes" ;
+  astronomy:discoveredDate "1915-10-18"^^xsd:date ;
+  astronomy:hasDiameter "200000" ;
+  astronomy:hasGravity "12.2" ;
+  astronomy:hasMass "216 quadrillion metric tons" ;
+  astronomy:hasTemperature "3042" ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  astronomy:spectralType "M5.5Ve" ;
+  rdfs:label "ProximaCentauri" ;
+.
+astronomy:RedGiantStar
+  rdf:type rdfs:Class ;
+  rdfs:label "RedGiantStar" ;
+  rdfs:subClassOf astronomy:GiantStar ;
+.
+astronomy:RedSuperGiantStar
+  rdf:type rdfs:Class ;
+  rdfs:label "RedSuperGiantStar" ;
+  rdfs:subClassOf astronomy:SuperGiantStar ;
+.
+astronomy:Saturn
+  rdf:type astronomy:Planet ;
+  astronomy:discoveredBy "Galileo Galilei" ;
+  astronomy:discoveredDate "1610-01-01"^^xsd:date ;
+  astronomy:hasColor "yellow" ;
+  astronomy:hasDiameter "161460" ;
+  astronomy:hasGravity "10.44" ;
+  astronomy:hasLife "false"^^xsd:boolean ;
+  astronomy:hasMass "568,300,000,000,000 quadrillion metric tons" ;
+  astronomy:hasOrbitalPeriod "10752,9" ;
+  astronomy:hasTemperature "-178" ;
+  astronomy:illuminatedBy astronomy:Sun ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  astronomy:orbitsAroundStar astronomy:Sun ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  astronomy:visibleFrom astronomy:Earth ;
+  astronomy:visitedBy astronomy:Cassini-Huygens_Mission ;
+  rdfs:label "Saturn" ;
+.
+astronomy:Shoemaker-Levy_9
+  rdf:type astronomy:ShortPeriodComet ;
+  astronomy:collidedWith astronomy:Jupiter ;
+  astronomy:discoveredBy "Carolyn Shoemaker, Eugene Shoemaker and David Levy" ;
+  astronomy:discoveredDate "1993-03-24"^^xsd:date ;
+  astronomy:hasDiameter "2" ;
+  astronomy:hasLife "false"^^xsd:boolean ;
+  astronomy:hasMass "4 trillion metric tons" ;
+  astronomy:hasOrbitalPeriod "2372.5" ;
+  astronomy:hasTemperature "-200" ;
+  astronomy:illuminatedBy astronomy:Sun ;
+  astronomy:influences astronomy:Jupiter ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  astronomy:orbitsAroundStar astronomy:Sun ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  astronomy:passedNear astronomy:Jupiter ;
+  astronomy:visibleFrom astronomy:Earth ;
+  rdfs:label "Shoemaker-Levy 9" ;
+.
+astronomy:ShortPeriodComet
+  rdf:type rdfs:Class ;
+  rdfs:label "ShortPeriodComet" ;
+  rdfs:subClassOf astronomy:Comet ;
+.
+astronomy:Skylab
+  rdf:type astronomy:SpaceStation ;
+  astronomy:hasActiveStatus "false"^^xsd:boolean ;
+  astronomy:hasAltitudeFromEarth "435"^^xsd:decimal ;
+  astronomy:hasOperator "NASA" ;
+  astronomy:hasOrbitalSpeed "28000"^^xsd:decimal ;
+  astronomy:launchDate "1973-05-14"^^xsd:date ;
+.
+astronomy:SolarAndHeliosphericObservatory
+  rdf:type astronomy:Telescope ;
+  astronomy:hasActiveStatus "true"^^xsd:boolean ;
+  astronomy:hasFocalLength 1.3 ;
+  astronomy:hasOperator "NASA and ESA" ;
+  astronomy:launchDate "1995-12-02"^^xsd:date ;
+  rdfs:label "SolarAndHeliosphericObservatory" ;
+.
+astronomy:SolarEclipse
+  rdf:type rdfs:Class ;
+  rdfs:label "SolarEclipse" ;
+  rdfs:subClassOf astronomy:Eclipse ;
+.
+astronomy:SpaceArtifact
+  rdf:type rdfs:Class ;
+  rdfs:label "SpaceArtifact" ;
+  rdfs:subClassOf astronomy:SpaceObject ;
+.
+astronomy:SpaceObject
+  rdf:type rdfs:Class ;
+  rdfs:label "SpaceObject" ;
+  rdfs:subClassOf rdfs:Resource ;
+.
+astronomy:SpaceStation
+  rdf:type rdfs:Class ;
+  rdfs:label "SpaceStation" ;
+  rdfs:subClassOf astronomy:SpaceArtifact ;
+.
+astronomy:SpaceXCrewDragonFreedom
+  rdf:type astronomy:MannedSpacecraft ;
+  astronomy:dockedAt astronomy:InternationalSpaceStation ;
+  astronomy:hasActiveStatus "true"^^xsd:boolean ;
+  astronomy:hasCrewCapacity 4 ;
+  astronomy:hasOperator "NASA" ;
+  astronomy:launchDate "2024-03-05"^^xsd:date ;
+.
+astronomy:Spacecraft
+  rdf:type rdfs:Class ;
+  rdfs:label "Spacecraft" ;
+  rdfs:subClassOf astronomy:SpaceArtifact ;
+.
+astronomy:Spiral
+  rdf:type rdfs:Class ;
+  rdfs:label "Spiral" ;
+  rdfs:subClassOf astronomy:Galaxy ;
+.
+astronomy:Star
+  rdf:type rdfs:Class ;
+  rdfs:label "Star" ;
+  rdfs:subClassOf astronomy:StellarObject ;
+.
+astronomy:StellarBlackHole
+  rdf:type rdfs:Class ;
+  rdfs:label "StellarBlackHole" ;
+  rdfs:subClassOf astronomy:BlackHole ;
+.
+astronomy:StellarObject
+  rdf:type rdfs:Class ;
+  rdfs:label "StellarObject" ;
+  rdfs:subClassOf astronomy:CelestialBody ;
+.
+astronomy:Sun
+  rdf:type astronomy:MainSequenceStar ;
+  astronomy:hasDiameter "139100" ;
+  astronomy:hasGravity "274" ;
+  astronomy:hasMass "1.989 nonillion metric tons" ;
+  astronomy:hasTemperature "5500" ;
+  astronomy:influences astronomy:Earth ;
+  astronomy:influences astronomy:Eris ;
+  astronomy:influences astronomy:Halley ;
+  astronomy:influences astronomy:Haumea ;
+  astronomy:influences astronomy:Jupiter ;
+  astronomy:influences astronomy:Makemake ;
+  astronomy:influences astronomy:Mars ;
+  astronomy:influences astronomy:Mercury ;
+  astronomy:influences astronomy:NEOWISE ;
+  astronomy:influences astronomy:Neptune ;
+  astronomy:influences astronomy:Pluto ;
+  astronomy:influences astronomy:Saturn ;
+  astronomy:influences astronomy:Uranus ;
+  astronomy:influences astronomy:Venus ;
+  astronomy:observedByTelescope astronomy:SolarAndHeliosphericObservatory ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  astronomy:spectralType "G2V" ;
+  astronomy:surroundedBy astronomy:Earth ;
+  astronomy:surroundedBy astronomy:Eris ;
+  astronomy:surroundedBy astronomy:Halley ;
+  astronomy:surroundedBy astronomy:Haumea ;
+  astronomy:surroundedBy astronomy:Jupiter ;
+  astronomy:surroundedBy astronomy:Makemake ;
+  astronomy:surroundedBy astronomy:Mars ;
+  astronomy:surroundedBy astronomy:Mercury ;
+  astronomy:surroundedBy astronomy:NEOWISE ;
+  astronomy:surroundedBy astronomy:Neptune ;
+  astronomy:surroundedBy astronomy:Pluto ;
+  astronomy:surroundedBy astronomy:Saturn ;
+  astronomy:surroundedBy astronomy:Uranus ;
+  astronomy:surroundedBy astronomy:Venus ;
+  rdfs:label "Sun" ;
+.
+astronomy:SuperGiantStar
+  rdf:type rdfs:Class ;
+  rdfs:label "SuperGiantStar" ;
+  rdfs:subClassOf astronomy:Star ;
+.
+astronomy:SupermassiveBlackHole
+  rdf:type rdfs:Class ;
+  rdfs:label "SupermassiveBlackHole" ;
+  rdfs:subClassOf astronomy:BlackHole ;
+.
+astronomy:Supernova
+  rdf:type rdfs:Class ;
+  rdfs:label "Supernova" ;
+  rdfs:subClassOf astronomy:AstronomicalPhenomenon ;
+.
+astronomy:Telescope
+  rdf:type rdfs:Class ;
+  rdfs:label "Telescope" ;
+  rdfs:subClassOf astronomy:SpaceArtifact ;
+.
+astronomy:Tempel1
+  rdf:type astronomy:ShortPeriodComet ;
+  astronomy:discoveredBy "Heinrich Wilhelm Olbers" ;
+  astronomy:discoveredDate "1867-04-03"^^xsd:date ;
+  astronomy:hasDiameter "7.6" ;
+  astronomy:hasLife "false"^^xsd:boolean ;
+  astronomy:hasMass "4.7 trillion metric tons" ;
+  astronomy:hasOrbitalPeriod "2,007.5" ;
+  astronomy:hasTemperature "-100" ;
+  astronomy:illuminatedBy astronomy:Sun ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  astronomy:orbitsAroundStar astronomy:Sun ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  astronomy:passedNear astronomy:Jupiter ;
+  astronomy:visibleFrom astronomy:Earth ;
+  rdfs:label "Tempel1" ;
+.
+astronomy:UnmannedSpacecraft
+  rdf:type rdfs:Class ;
+  rdfs:label "UnmannedSpacecraft" ;
+  rdfs:subClassOf astronomy:Spacecraft ;
+.
+astronomy:Uranus
+  rdf:type astronomy:Planet ;
+  astronomy:discoveredBy "William Herschel" ;
+  astronomy:discoveredDate "1781-03-13"^^xsd:date ;
+  astronomy:hasColor "blue-green" ;
+  astronomy:hasDiameter "50724" ;
+  astronomy:hasLife "false"^^xsd:boolean ;
+  astronomy:hasMass "86,810,000,000,000 quadrillion metric tons" ;
+  astronomy:hasOrbitalPeriod "3660" ;
+  astronomy:hasTemperature "-224" ;
+  astronomy:illuminatedBy astronomy:Sun ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  astronomy:orbitsAroundStar astronomy:Sun ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  astronomy:visibleFrom astronomy:Earth ;
+  astronomy:visitedBy astronomy:Voyager2 ;
+  rdfs:label "Uranus" ;
+.
+astronomy:V404Cygni
+  rdf:type astronomy:StellarBlackHole ;
+  astronomy:discoveredBy "Bruce Margon" ;
+  astronomy:discoveredDate "1989-06-04"^^xsd:date ;
+  astronomy:hasDiameter "32.7" ;
+  astronomy:hasMass "23.9 quadrillion metric tons" ;
+  astronomy:hasSpin 0.95 ;
+  astronomy:hasTemperature "10000000" ;
+  astronomy:observedByTelescope astronomy:HubbleSpaceTelescope ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  rdfs:label "V404Cygni" ;
+.
+astronomy:Venus
+  rdf:type astronomy:Planet ;
+  astronomy:discoveredBy "Unknown" ;
+  astronomy:hasArtificialSatellite astronomy:Akatsuki ;
+  astronomy:hasColor "yellow" ;
+  astronomy:hasDiameter "12104" ;
+  astronomy:hasGravity "8.87" ;
+  astronomy:hasLife "false"^^xsd:boolean ;
+  astronomy:hasMass "4,867,000,000,000 metric tons" ;
+  astronomy:hasOrbitalPeriod "225" ;
+  astronomy:hasTemperature "465" ;
+  astronomy:illuminatedBy astronomy:Sun ;
+  astronomy:influences astronomy:Earth ;
+  astronomy:orbitsAroundStar astronomy:Sun ;
+  astronomy:partOfGalaxy astronomy:MilkyWay ;
+  astronomy:visibleFrom astronomy:Earth ;
+  rdfs:label "Venus" ;
+.
+astronomy:Voyager2
+  rdf:type astronomy:UnmannedSpacecraft ;
+  astronomy:hasActiveStatus "true"^^xsd:boolean ;
+  astronomy:hasOperator "NASA" ;
+  astronomy:launchDate "1977-08-20"^^xsd:date ;
+  rdfs:label "Voyager2" ;
+.
+astronomy:WeatherSatellite
+  rdf:type rdfs:Class ;
+  rdfs:label "WeatherSatellite" ;
+  rdfs:subClassOf astronomy:ArtificialSatellite ;
+.
+astronomy:artificialSatelliteOf
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:ArtificialSatellite ;
+  rdfs:label "artificialSatelliteOf" ;
+  rdfs:range astronomy:Planet ;
+.
+astronomy:causedBy
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:Eclipse ;
+  rdfs:label "cuased by" ;
+  rdfs:range astronomy:Moon ;
+.
+astronomy:collidedWith
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:CelestialBody ;
+  rdfs:label "collidedWith" ;
+  rdfs:range astronomy:CelestialBody ;
+.
+astronomy:connectedTo
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:ArtificialSatellite ;
+  rdfs:label "is connected to" ;
+  rdfs:range astronomy:SpaceStation ;
+  rdfs:subPropertyOf astronomy:relatedTo ;
+.
+astronomy:discoveredBy
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:AstronomicalObject ;
+  rdfs:label "DiscoveredBy" ;
+  rdfs:range xsd:string ;
+.
+astronomy:discoveredDate
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:AstronomicalObject ;
+  rdfs:label "DiscoveredDate" ;
+  rdfs:range xsd:date ;
+.
+astronomy:dockedAt
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:MannedSpacecraft ;
+  rdfs:label "docked at" ;
+  rdfs:range astronomy:SpaceStation ;
+.
+astronomy:hasActiveStatus
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:SpaceArtifact ;
+  rdfs:label "ActiveStatus" ;
+  rdfs:range xsd:boolean ;
+.
+astronomy:hasAltitudeFromEarth
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:SpaceStation ;
+  rdfs:label "altitude from earth" ;
+  rdfs:range xsd:decimal ;
+.
+astronomy:hasArtificialSatellite
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:Planet ;
+  rdfs:label "hasArtificialSatellite" ;
+  rdfs:range astronomy:ArtificialSatellite ;
+.
+astronomy:hasBrightness
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:Supernova ;
+  rdfs:label "Brightness" ;
+  rdfs:range xsd:decimal ;
+.
+astronomy:hasColor
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:Planet ;
+  rdfs:label "has color" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf astronomy:hasPhysicalProperty ;
+.
+astronomy:hasCrewCapacity
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:MannedSpacecraft ;
+  rdfs:label "CrewCapacity" ;
+  rdfs:range xsd:integer ;
+.
+astronomy:hasDiameter
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:CelestialBody ;
+  rdfs:label "Diameter" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf astronomy:hasPhysicalProperty ;
+.
+astronomy:hasDuration
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:AstronomicalPhenomenon ;
+  rdfs:label "Duration" ;
+  rdfs:range xsd:integer ;
+.
+astronomy:hasFocalLength
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:Telescope ;
+  rdfs:label "FocalLength" ;
+  rdfs:range xsd:decimal ;
+.
+astronomy:hasGalacticCenter
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:Galaxy ;
+  rdfs:label "hasGalacticCenter" ;
+  rdfs:range astronomy:StellarObject ;
+.
+astronomy:hasGravity
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:CelestialBody ;
+  rdfs:label "Gravity" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf astronomy:hasPhysicalProperty ;
+.
+astronomy:hasLife
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:PlanetaryObject ;
+  rdfs:label "Has Life" ;
+  rdfs:range xsd:boolean ;
+.
+astronomy:hasMass
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:CelestialBody ;
+  rdfs:label "Mass" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf astronomy:hasPhysicalProperty ;
+.
+astronomy:hasMaxCoverage
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:Eclipse ;
+  rdfs:label "Has maximum coverage" ;
+  rdfs:range xsd:decimal ;
+.
+astronomy:hasOperator
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:SpaceArtifact ;
+  rdfs:label "hasOperator" ;
+  rdfs:range xsd:string ;
+.
+astronomy:hasOrbitType
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:ArtificialSatellite ;
+  rdfs:label "orbitType" ;
+  rdfs:range xsd:string ;
+.
+astronomy:hasOrbitalPeriod
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:PlanetaryObject ;
+  rdfs:label "orbitalPeriod" ;
+  rdfs:range xsd:string ;
+.
+astronomy:hasOrbitalSpeed
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:SpaceStation ;
+  rdfs:label "orbitalSpeed" ;
+  rdfs:range xsd:decimal ;
+.
+astronomy:hasPhysicalProperty
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:CelestialBody ;
+  rdfs:label "PhysicalProperty" ;
+  rdfs:range xsd:string ;
+.
+astronomy:hasSatellite
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:Planet ;
+  rdfs:label "hasSatellite" ;
+  rdfs:range astronomy:Moon ;
+.
+astronomy:hasSpin
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:BlackHole ;
+  rdfs:label "Spin" ;
+  rdfs:range xsd:decimal ;
+.
+astronomy:hasTemperature
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:CelestialBody ;
+  rdfs:label "Temperature" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf astronomy:hasPhysicalProperty ;
+.
+astronomy:illuminatedBy
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:PlanetaryObject ;
+  rdfs:label "illuminatedBy" ;
+  rdfs:range astronomy:Star ;
+.
+astronomy:illuminates
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:Star ;
+  rdfs:label "illuminates" ;
+  rdfs:range astronomy:PlanetaryObject ;
+.
+astronomy:influences
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:CelestialBody ;
+  rdfs:label "influences" ;
+  rdfs:range astronomy:AstronomicalObject ;
+  rdfs:subPropertyOf astronomy:relatedTo ;
+.
+astronomy:interactsWith
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:ArtificialSatellite ;
+  rdfs:label "interactsWith" ;
+  rdfs:range astronomy:SpaceStation ;
+.
+astronomy:launchDate
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:SpaceArtifact ;
+  rdfs:label "launchDate" ;
+  rdfs:range xsd:date ;
+.
+astronomy:launchedBy
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:ArtificialSatellite ;
+  rdfs:label "launchedBy" ;
+  rdfs:range astronomy:Spacecraft ;
+.
+astronomy:monitors
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:WeatherSatellite ;
+  rdfs:label "monitors" ;
+  rdfs:range astronomy:PlanetaryObject ;
+.
+astronomy:observedBy
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:AstronomicalObject ;
+  rdfs:label "Is observed by" ;
+  rdfs:subPropertyOf astronomy:relatedTo ;
+.
+astronomy:observedBySpacecraft
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:AstronomicalObject ;
+  rdfs:range astronomy:Spacecraft ;
+  rdfs:subPropertyOf astronomy:observedBy ;
+.
+astronomy:observedByTelescope
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:AstronomicalObject ;
+  rdfs:range astronomy:Telescope ;
+  rdfs:subPropertyOf astronomy:observedBy ;
+.
+astronomy:observedFrom
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:AstronomicalPhenomenon ;
+  rdfs:label "observedFrom" ;
+  rdfs:range astronomy:Planet ;
+.
+astronomy:orbitsAround
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:PlanetaryObject ;
+  rdfs:label "orbits around" ;
+  rdfs:subPropertyOf astronomy:relatedTo ;
+.
+astronomy:orbitsAroundPlanet
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:PlanetaryObject ;
+  rdfs:range astronomy:Planet ;
+  rdfs:subPropertyOf astronomy:orbitsAround ;
+.
+astronomy:orbitsAroundStar
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:PlanetaryObject ;
+  rdfs:range astronomy:Star ;
+  rdfs:subPropertyOf astronomy:orbitsAround ;
+.
+astronomy:partOfGalaxy
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:CelestialBody ;
+  rdfs:label "is part of galaxy" ;
+  rdfs:range astronomy:Galaxy ;
+  rdfs:subPropertyOf astronomy:relatedTo ;
+.
+astronomy:passedNear
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:Comet ;
+  rdfs:label "passed near" ;
+  rdfs:range astronomy:Planet ;
+.
+astronomy:providesServiceTo
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:NavigationSatellite ;
+  rdfs:label "providesServiceTo" ;
+  rdfs:range astronomy:Planet ;
+.
+astronomy:relatedTo
+  rdf:type rdf:Property ;
+  rdfs:label "Is related to" ;
+.
+astronomy:resultOf
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:BlackHole ;
+  rdfs:label "resultOf" ;
+  rdfs:range astronomy:Star ;
+.
+astronomy:spectralType
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:Star ;
+  rdfs:label "spectralType" ;
+  rdfs:range xsd:string ;
+.
+astronomy:surroundedBy
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:StellarObject ;
+  rdfs:label "surroundedBy" ;
+  rdfs:range astronomy:CelestialBody ;
+.
+astronomy:theGreatAmerican
+  rdf:type astronomy:SolarEclipse ;
+  astronomy:hasDuration 210 ;
+  astronomy:hasMaxCoverage 100.00 ;
+  astronomy:observedFrom astronomy:Earth ;
+  astronomy:visibleToNakedEye "true"^^xsd:boolean ;
+  astronomy:wasObservedOn "2017-08-21"^^xsd:date ;
+  rdfs:label "Great American Eclipse" ;
+.
+astronomy:theHarvestMoon
+  rdf:type astronomy:LunarEclipse ;
+  astronomy:hasDuration 180 ;
+  astronomy:hasMaxCoverage 80.00 ;
+  astronomy:observedFrom astronomy:Earth ;
+  astronomy:visibleToNakedEye "true"^^xsd:boolean ;
+  astronomy:wasObservedOn "2022-09-07"^^xsd:date ;
+  rdfs:label "The Harvest Moon" ;
+.
+astronomy:theRingOfFire
+  rdf:type astronomy:SolarEclipse ;
+  astronomy:hasDuration 240 ;
+  astronomy:hasMaxCoverage 95.00 ;
+  astronomy:observedFrom astronomy:Earth ;
+  astronomy:visibleToNakedEye "true"^^xsd:boolean ;
+  astronomy:wasObservedOn "2023-10-14"^^xsd:date ;
+  rdfs:label "The Ring of Fire" ;
+.
+astronomy:theSnowMoon
+  rdf:type astronomy:LunarEclipse ;
+  astronomy:hasDuration 240 ;
+  astronomy:hasMaxCoverage 100.00 ;
+  astronomy:observedFrom astronomy:Earth ;
+  astronomy:visibleToNakedEye "true"^^xsd:boolean ;
+  astronomy:wasObservedOn "2017-02-12"^^xsd:date ;
+  rdfs:label "Snow Moon" ;
+.
+astronomy:visibleFrom
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:PlanetaryObject ;
+  rdfs:label "is/was Visible From" ;
+  rdfs:range astronomy:Planet ;
+.
+astronomy:visibleToNakedEye
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:AstronomicalPhenomenon ;
+  rdfs:label "VisibleToNakedEye" ;
+  rdfs:range xsd:boolean ;
+.
+astronomy:visitedBy
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:PlanetaryObject ;
+  rdfs:label "visitedBy" ;
+  rdfs:range astronomy:Spacecraft ;
+.
+astronomy:wasObservedOn
+  rdf:type rdf:Property ;
+  rdfs:domain astronomy:AstronomicalPhenomenon ;
+  rdfs:label "was observed on" ;
+  rdfs:range xsd:date ;
+.
